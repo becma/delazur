@@ -1,0 +1,40 @@
+main { 
+	background: #f5c555;
+	color: #fff;
+	padding: 30px;
+}
+
+fieldset { 
+	/* Retrouver le bon rose et le bon margin*/
+	border-color: #d679ab;
+	margin-bottom: 30px;
+}
+
+fieldset:nth-child(2) { 
+	background: rgba(214, 121, 171, 0.5);
+}
+
+legend { 
+	text-align: center;
+}
+
+/* Re-ajuster bon margin */
+label { 
+	display: block;
+	margin-top: 30px;
+}
+
+input {
+	border: none;
+	border-bottom: 1.5px solid #000;
+	background: transparent;
+	margin-top: 30px;
+}
+
+/* Trouver une façon de communiquer avec seulement les inputs radio */
+/* 
+input[type="radio"] {
+	display: inline;
+	border: 5px solid #900;
+  } */
+
