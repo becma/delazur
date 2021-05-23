@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Damion&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/assets/css/app.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
 </head>
 <body>
 <header>
@@ -29,101 +29,153 @@
 <main>
     <!-- Changer l'action -->
     <form action="#" id="formulaire" name="formulaire" method="GET" target="_blank">
+<!-- Informations générales -->
+<!-- Fieldset ne peux pas être en grid ou en flex. 
+    https://developer.mozilla.org/fr/docs/Web/HTML/Element/Fieldset -->
         <fieldset>
             <legend>Informations générales</legend>
-
-            <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom">
-
-            <label for="nom_de_famille">Nom de famille</label>
-            <input type="text" id="nom_de_famille" name="nom_de_famille">
-
-            <label for="courriel">Adresse courriel</label>
-            <input type="mail" id="courriel" name="courriel">
-
-            <label for="naissance">Date de naissance</label>
-            <input type="date" id="naissance" name="naissance">
-
-            <label for="age">Et ton âge?</label>
-            <input type="number" id="age" name="age" >
-
-            <label for="telephone">Numéro de téléphone</label>
-            <input type="tel" id="telephone" name="telephone">
+            <div class="informations_generales">
+                <div>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" minlength="2">
+                </div>
+                <div>
+                    <label for="nom_de_famille">Nom de famille</label>
+                    <input type="text" id="nom_de_famille" name="nom_de_famille" minlength="2">
+                </div>
+                <div>
+                    <!-- Vérifier MDN pour expression rationelle et pattern. Surement besoin de JS. -->
+                    <label for="courriel">Adresse courriel</label>
+                    <input type="mail" id="courriel" name="courriel">
+                </div>
+                <div>
+                    <label for="naissance">Date de naissance</label>
+                    <input type="date" id="naissance" name="naissance">
+                </div>
+                <div>
+                    <label for="age">Et ton âge?</label>
+                    <input type="number" id="age" name="age" min="0" max="99">
+                </div>
+                <div>
+                    <label for="telephone">Numéro de téléphone</label>
+                    <input type="tel" id="telephone" name="telephone">
+                </div>
+            </div>
         </fieldset>
-        <fieldset>
+<!-- Adresse -->
+        <fieldset class="adresse">
             <legend>Adresse</legend>
-
-            <label for="civique">Numéro civique</label>
-            <input type="text" id="civique" name="civique">
-
-            <label for="rue">Rue</label>
-            <input type="text" id="rue" name="rue">
-
-            <label for="province">province</label>
-            <!-- Regarder pour plus de détails province, pays et code postal-->
-            <select id="province" name="province">
-                <option value="alberta">Alberta</option>
-            </select>
-
-            <label for="pays">Pays</label>
-            <input type="text" id="pays" name="pays" placeholder="Canada">
-
-            <label for="code_postal">Code Postal</label>
-            <input type="text" id="code_postal" name="code_postal">
-
+            <div>
+                <div>
+                    <label for="civique">Numéro civique</label>
+                    <input type="text" id="civique" name="civique">
+                </div>
+                <div>
+                    <label for="rue">Rue</label>
+                    <input type="text" id="rue" name="rue">
+                </div>
+                <div>
+                    <label for="province">province</label>
+                    <!-- Regarder pour plus de détails province, pays et code postal-->
+                    <select id="province" name="province">
+                        <option value="alberta">Alberta</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="pays">Pays</label>
+                    <input type="text" id="pays" name="pays" placeholder="Canada">
+                </div>
+                <div>
+                    <label for="code_postal">Code Postal</label>
+                    <input type="text" id="code_postal" name="code_postal">
+                </div>
+            </div>
         </fieldset>
-
-        <label for="couleur">Votre couleur préférée?</label>
-        <input type="color" id="couleur" name="couleur">
-
-        <label for="images">Vos images préférées?</label>
-        <input type="file" id="images" name="images" multiple>
-
-        <label for="mois_annee">Votre mois préféré? De quelle année?</label>
-        <input type="month" id="mois_annee" class="mois_annee">
-
-        <label for="semaine">Votre semaine préférée de tous les temps?</label>
-        <input type="week" id="semaine" name="semaine">
-
-        <label for="site">Un site que nous devons découvrir?</label>
-        <input type="url" id="site" name="site">
-
-        <!-- Demander si on doit mettre le tiret entre lui et donnez -->
-        <!-- Costumizer la ligne -->
-        <label for="note_site">Quelle note lui donnez-vous?</label>
-        <input type="range" id="note_site" name="note_site" step="10">
-
-        <label for="date_show">La date et l'heure du show que tu veux venir voir?</label>
-        <input type="datetime-local" id="date_show" name="date_show">
-
-        <p>Durant ce show, tu veux...</p>
-        <label for="danser">Danser</label>
-        <input type="checkbox" id="danser" name="danser">
-        <label for="groover">Groover</label>
-        <input type="checkbox" id="groover" name="groover">
-        <label for="coucher_tard">Me coucher tard</label>
-        <input type="checkbox" id="coucher_tard" name="coucher_tard"> 
-
-        <fieldset>
+<!-- Couleur - Images - Mois - Semaine -->
+        <fieldset class="preferences">
+            <div>
+                <div>
+                    <label for="couleur">Votre couleur préférée?</label>
+                    <input type="color" id="couleur" name="couleur">
+                </div>
+                <div>
+                    <label for="images">Vos images préférées?</label>
+                    <input type="file" id="images" name="images" multiple>
+                </div>
+                <div>
+                    <label for="mois_annee">Votre mois préféré? De quelle année?</label>
+                    <input type="month" id="mois_annee" class="mois_annee">
+                </div>
+                <div>
+                    <label for="semaine">Votre semaine préférée de tous les temps?</label>
+                    <input type="week" id="semaine" name="semaine">
+                </div>
+            </div>
+        </fieldset>
+<!-- Site - - URL - Datetime - Checkbox  -->
+        <fieldset class="site_spectacle">
+            <div>
+                <div>
+                    <label for="site">Un site que nous devons découvrir?</label>
+                    <input type="url" id="site" name="site">
+                </div>
+                <div>
+                    <!-- Demander si on doit mettre le tiret entre lui et donnez -->
+                    <!-- Changer le visuel de la ligne -->
+                    <label for="note_site">Quelle note lui donnez-vous?</label>
+                    <input type="range" id="note_site" name="note_site" step="10">
+                </div>
+                <div>
+                    <label for="date_show">La date et l'heure du show que tu veux venir voir?</label>
+                    <input type="datetime-local" id="date_show" name="date_show">
+                </div>
+                <div class="checkbox">
+                    <p>Durant ce show, tu veux...</p>
+                    <div>
+                        <label for="danser">Danser</label>
+                        <input type="checkbox" id="danser" name="danser">
+                    </div>
+                    <div>
+                        <label for="groover">Groover</label>
+                        <input type="checkbox" id="groover" name="groover">
+                    </div>
+                    <div>
+                        <label for="coucher_tard">Me coucher tard</label>
+                        <input type="checkbox" id="coucher_tard" name="coucher_tard"> 
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+<!-- Radio (membres préférés) -->
+        <fieldset class="membres_preferes">
             <legend>Votre membre du groupe préféré?</legend>
-            <label for="jasmine">Alain Jasmine</label>
-            <input type="radio" id="jasmine" name="jasmine">
-
-            <label for="danger">Jacques Danger</label>
-            <input type="radio" id="danger" name="danger">
-
-            <label for="dove">Dove</label>
-            <input type="radio" id="dove" name="dove">
-
-            <label for="dr">Dr Homme</label>
-            <input type="radio" id="dr" name="dr">            
+            <div class="membres_preferes">
+                <div>
+                    <input type="radio" id="jasmine" name="jasmine">
+                    <label for="jasmine">Alain Jasmine</label>
+                </div>
+                <div>
+                    <input type="radio" id="danger" name="danger">
+                    <label for="danger">Jacques Danger</label>
+                </div>
+                <div>
+                    <input type="radio" id="dove" name="dove">
+                    <label for="dove">Dove</label>
+                </div>
+                <div>
+                    <input type="radio" id="dr" name="dr"> 
+                    <label for="dr">Dr Homme</label>
+                </div>
+            </div>           
         </fieldset>
-
-        <label for="mot_de_passe">Mot de paaaaaaaaaasse?</label>
+<!-- Mot de passsssssssssssssse -->
+        <!-- Rajouter la validation du mot de passe surement en JS. Kaput Draconis-->
+        <label for="mot_de_passe" class="mot_de_passe">Mot de paaaaaaaaaasse?</label>
         <input type="password" id="mot_de_passe" class="mot_de_passe">
-
-        <button type="reset">Réinitialiser</button>
-        <button type="submit">Soumettre</button>
+        <div class="boutons">
+            <button type="reset">Réinitialiser</button>
+            <button type="submit">Soumettre</button>
+        </div>
     </form>
 
 </main>  
