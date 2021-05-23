@@ -1,0 +1,117 @@
+/* J'ai fait une bêtise */
+main { 
+	background: #f5c555;
+	color: #fff;
+	padding: 30px;
+}
+
+fieldset { 
+	/* Retrouver le bon rose et le bon margin*/
+	border-color: #d679ab;
+	margin-bottom: 30px;
+}
+
+fieldset:nth-child(2) { 
+	background: rgba(214, 121, 171, 0.5);
+}
+
+legend { 
+	text-align: center;
+}
+
+/* Re-ajuster bon margin */
+label { 
+	display: block;
+	margin-top: 30px;
+}
+
+/* width a re-évaluer */
+input {
+	border: none;
+	border-bottom: 1.5px solid #000;
+	background: transparent;
+	/* margin-top: 10px; */
+	/* width: 85%; */
+}
+
+.adresse { 
+	padding: 45px;
+}
+
+#province { 
+	background: transparent;
+	height: 50px;
+	width: 200px;
+	border: 1px solid #000;
+	padding-left: 10px; 
+}
+
+.preferences, .site_spectacle { 
+	border: none;
+	padding-left: 20px;
+}
+
+#couleur { 
+	width: 50px;
+	height: 50px;
+	border: none;
+	margin: 15px;
+}
+
+.checkbox { 
+	margin-top: 30px;
+}
+
+.checkbox > div > label {
+	display: inline;
+}
+
+.membres_preferes > div { 
+	margin-left: 45px;
+}
+
+.membres_preferes > div > label {
+	display: inline;
+  }
+
+.mot_de_passe { 
+	margin-left: 20px;
+}
+
+.boutons { 
+	display: flex;
+	justify-content: space-around; 
+	width: 300px;
+	margin: auto;
+}
+
+button { 
+	background: transparent;
+	height: 40px;
+	width: 120px;
+	border: 1px solid #000;
+	margin-top: 50px;
+}
+
+button:hover { 
+	background: #d679ab8c;
+}
+
+/* pseudo-classe :valid :invalid */
+/* Seulement 1 break point? */
+@media screen and (min-width: 1200px) {
+	/* fieldset {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	} */
+
+	/* Fieldset ne peux pas être en grid ou en flex. 
+    https://developer.mozilla.org/fr/docs/Web/HTML/Element/Fieldset  */
+
+	/* .informations_generales { 
+		display: grid;
+		grid-template-rows: 1 / 5;
+		grid-template-columns: 1 / 3;
+	} */
+}
