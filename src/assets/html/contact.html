@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DELAZUR</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Damion&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
 </head>
 <body>
 <header>
@@ -76,7 +75,7 @@
                     <input type="text" id="rue" name="rue">
                 </div>
                 <div>
-                    <label for="province">province</label>
+                    <label for="province">Province</label>
                     <!-- Regarder pour plus de détails province, pays et code postal-->
                     <select id="province" name="province">
                         <option value="alberta">Alberta</option>
@@ -105,7 +104,7 @@
                 </div>
                 <div>
                     <label for="mois_annee">Votre mois préféré? De quelle année?</label>
-                    <input type="month" id="mois_annee" class="mois_annee">
+                    <input type="month" id="mois_annee" class="mois_annee" maxlength="4">
                 </div>
                 <div>
                     <label for="semaine">Votre semaine préférée de tous les temps?</label>
@@ -148,23 +147,24 @@
             </div>
         </fieldset>
 <!-- Radio (membres préférés) -->
+<!-- Class  membres_preferes a revoir -->
         <fieldset class="membres_preferes">
             <legend>Votre membre du groupe préféré?</legend>
             <div class="membres_preferes">
                 <div>
-                    <input type="radio" id="jasmine" name="jasmine">
+                    <input type="radio" id="jasmine" name="membre" value="alain">
                     <label for="jasmine">Alain Jasmine</label>
                 </div>
                 <div>
-                    <input type="radio" id="danger" name="danger">
+                    <input type="radio" id="danger" name="membre" value="jacques">
                     <label for="danger">Jacques Danger</label>
                 </div>
                 <div>
-                    <input type="radio" id="dove" name="dove">
+                    <input type="radio" id="dove" name="membre" value="dove">
                     <label for="dove">Dove</label>
                 </div>
                 <div>
-                    <input type="radio" id="dr" name="dr"> 
+                    <input type="radio" id="dr" name="membre" value="homme"> 
                     <label for="dr">Dr Homme</label>
                 </div>
             </div>           
