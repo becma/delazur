@@ -38,6 +38,7 @@ body {
 
 main {
     grid-column: 1 / 6;
+    padding-left: 20px;
 }
 
 header {
@@ -63,6 +64,7 @@ header > nav {
 header > nav > ul {
     justify-content: space-evenly;
     list-style-type: none;
+    font-family: 'Damion', cursive;
     font-size: 4rem;
     margin-top: 0;
     padding: 0;
@@ -87,12 +89,66 @@ header li a:hover, header li a:focus {
     outline: none;
 }
 
-header li a.active {
-    border-color: transparent;
+header li a.active, header li a:visited {
+    border-bottom: transparent;
     color: #d679a6;
     font-weight: bold;
     pointer-events: none;
 }
+
+h2 {
+    font-family: 'Damion', cursive;
+    color: #f5c555;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+}
+
+h3 {
+    color: #d679a6;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #f5c555;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+button {
+    background-color: #f5c555;
+    border: 2px solid #f5c555;
+    text-transform: uppercase;
+    font: 1rem 'Montserrat', sans-serif;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+table {
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+td, th, p {
+    font: 1.1rem 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+}
+tr {
+    text-align: center;
+}
+
+.chandails {
+    text-align: left;
+}
+
+.chandails2 {
+    text-align: left;
+}
+
+
+
+
+
 
 footer {
     background-color: rgba(0, 0, 0, 0.5);
