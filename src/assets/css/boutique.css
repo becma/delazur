@@ -141,7 +141,7 @@ tr {
     text-align: left;
 }
 
-.chandails2 {
+section.chandails tr:first-child > th:first-child, section.chandails tr:nth-child(2) > td:first-child {
     text-align: left;
 }
 
