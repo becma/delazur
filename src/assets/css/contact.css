@@ -16,12 +16,12 @@ fieldset:nth-child(2) {
 
 legend { 
 	text-align: center;
+	display: flex;
 }
 
 /* Re-ajuster bon margin */
 label { 
 	display: block;
-	margin-top: 30px;
 }
 
 /* width a re-évaluer */
@@ -30,7 +30,8 @@ input {
 	border-bottom: 1.5px solid #000;
 	background: transparent;
 	/* margin-top: 10px; */
-	/* width: 85%; */
+	width: 85%;
+	margin: 0 auto;
 }
 
 .adresse { 
@@ -54,13 +55,13 @@ input {
 	width: 50px;
 	height: 50px;
 	border: none;
-	margin: 15px;
+	margin-left: 15px;
 	padding: 0;
 }
 
-.checkbox { 
+/* .checkbox { 
 	margin-top: 30px;
-}
+} */
 
 .checkbox > div > label {
 	display: inline;
@@ -99,9 +100,14 @@ button:hover {
 	background: #d679ab8c;
 }
 
+::placeholder {
+	color: black;
+}
+
 /* pseudo-classe :valid :invalid */
-/* Seulement 1 break point? */
+
 @media screen and (min-width: 1200px) {
+
 	/* fieldset {
 		display: flex;
 		flex-wrap: wrap;
@@ -116,7 +122,137 @@ button:hover {
 		grid-template-rows: 1 / 5;
 		grid-template-columns: 1 / 3;
 	} */
+
+	.informations_generales {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 50px;
+	}
+	/* regarder pour une valeur pas absolu */
+	.informations_generales div {
+		flex-basis: 200px;
+		flex-grow: 1;
+	}
+
+	.informations_generales > div:nth-child(4),
+	.informations_generales > div:nth-child(7) {
+		flex-basis: 1200px;
+	}
+
+	.informations_generales label {
+		padding-bottom: 25px;
+		margin-top: 30px;
+	}
+
+	.informations_generales > input[type=text],
+		input[type=date],
+		input[type=number] {
+		width: 420px;
+	}
+
+	input {
+		max-width: 1200px;
+	}
+
+	.adresse {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	} 
+
+	/* canada semble être écrit un peu haut */
+	.adresse  div   {
+		margin-right: 20px;
+		width: 100%;
+	}
+
+	/* On peut essayer de trouver une meilleure manière de l'aligner ?  */
+	.adresse input {
+		height: 47px;
+	}
+
+	.preferences {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 50px;
+	}
+
+	.preferences label {
+		padding-bottom: 20px;
+	}
+
+	.site_spectacle {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.site_spectacle div {
+		flex-grow: 1;
+		flex-basis: 450px;
+	}
+
+	.site_spectacle label {
+		padding-bottom: 20px;
+	}
+
+	.membres_preferes {
+		display: flex;
+		padding: 50px 0;
+		width: 100%;
+	}
+
+	.membres_preferes div {
+		width: 100%;
+	}
+	.membres_preferes div input{
+		width: 13px;
+	}
+
+	.show {
+		display: flex;
+		border: none;
+		padding-left: 20px;
+	}
+
+	.show p {
+		width: 100%;
+		margin: 0;
+	}
+
+	.show > div {
+		width: 50%;
+	}
+
+	.show label {
+		margin-top: 0;
+	}
+
+	#date_show {
+		height: 60px;
+	}
+	
+	.checkbox  {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.checkbox div {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.checkbox div input {
+		width: 20px;
+		height: 20px;
+	}
+
+	.checkbox label {
+		display: inline;
+		margin-right: 5px;
+	}
+
 }
-/* input[type=] {
-	background-color: aqua;
-} */
+
+/* faire le slider */
+/* rajouter du padding pour la section entre adresse et membre préféré et bien aligner */
