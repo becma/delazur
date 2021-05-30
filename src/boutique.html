@@ -25,7 +25,27 @@
         </nav>
     </header>
     <main>
-        <div class="panierAchat"><i class="fas fa-shopping-cart" aria-hidden="true"></i></div>
+        <div class="panierAchat panier-ouvert">
+            <div>
+                <i class="fas fa-shopping-cart" aria-hidden="true"><sub>3</sub></i>
+            </div>
+            <table id="panierAchat-tb" class="panier-ouvert">
+                <tr>
+                    <th id="panierAchat-th" colspan="4">Panier d'achat</th>
+                </tr>
+                <tr>
+                    <th headers="panierAchat-th" colspan="4" id="premier-item">Nobody Loves Like I Do</th>
+                </tr>
+                <tr>
+                    <td headers="panierAchat-th premier-item" colspan="1">Vinyle</td>
+                    <td headers="panierAchat-th premier-item" colspan="1">30$</td>
+                    <td headers="panierAchat-th premier-item" colspan="2"><a href="#">Retirer du panier</a></td>
+                </tr>
+                <!-- <tr>
+                    <td><hr></td>
+                </tr> -->
+            </table>
+        </div>
         <h2>Boutique</h2>
         <section class="album">
             <h3>Albums</h3>
