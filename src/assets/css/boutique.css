@@ -6,6 +6,10 @@ img {
     width: 200px;
 }
 
+abbr {
+    text-decoration: none;
+}
+
 td {
     text-align: center;
 }
@@ -96,6 +100,13 @@ header li a.active, header li a:visited {
     pointer-events: none;
 }
 
+.panierAchat {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    font-size: 3rem;
+}
+
 h2 {
     font-family: 'Damion', cursive;
     color: #f5c555;
@@ -109,7 +120,7 @@ h3 {
     text-transform: uppercase;
 }
 
-h4 {
+main tr:first-child > th:first-child {
     color: #f5c555;
     text-transform: uppercase;
     text-align: left;
@@ -131,9 +142,10 @@ table {
 
 td, th, p {
     font: 1.1rem 'Montserrat', sans-serif;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
-tr {
+
+tr, td {
     text-align: center;
 }
 
@@ -145,10 +157,13 @@ section.chandails tr:first-child > th:first-child, section.chandails tr:nth-chil
     text-align: left;
 }
 
+section.album tr:nth-child(2) > td {
+    height: 200px;
+} 
 
-
-
-
+section.chandails tr:nth-child(3) > td {
+    height: 200px;
+} 
 
 footer {
     background-color: rgba(0, 0, 0, 0.5);
@@ -206,10 +221,17 @@ footer div:last-child {
     body {
         grid-template-columns: repeat(16, 1fr);
         grid-row-gap: 50px;
+        background-size: auto 45vw;
     }
 
     main {
         grid-column: 2 / 16;
+    }
+
+    h3 + div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
 
     header {
@@ -219,6 +241,13 @@ footer div:last-child {
     header > nav > ul {
         display: flex;
     }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
 }
 
 @media screen and (min-width: 1224px) {
@@ -234,7 +263,7 @@ footer div:last-child {
     }
 
     body {
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-size: auto 100vh;
     }
 
