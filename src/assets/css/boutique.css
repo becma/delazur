@@ -112,12 +112,15 @@ button {
     margin: auto;
 }
 
-sub {
+sub#nombreDeProduitsDansLePanier {
+    margin: 0 10px 0 -0.9rem;
     color: black;
     font-size:1.1rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 50%;
     background-color: #d679a6;
-    z-index: 1;
+    z-index: 2;
+    
 }
 
 section tr:first-child > th:first-child {
