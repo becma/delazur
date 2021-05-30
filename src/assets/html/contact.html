@@ -42,9 +42,8 @@
                     <input type="text" id="nom_de_famille" name="nom_de_famille" minlength="2">
                 </div>
                 <div>
-                    <!-- Vérifier MDN pour expression rationelle et pattern. Surement besoin de JS. -->
                     <label for="courriel">Adresse courriel</label>
-                    <input type="mail" id="courriel" name="courriel">
+                    <input type="mail" id="courriel" name="courriel" pattern="">
                 </div>
                 <div>
                     <label for="naissance">Date de naissance</label>
@@ -75,15 +74,28 @@
                     <!-- Regarder pour plus de détails province, pays et code postal-->
                     <select id="province" name="province">
                         <option value="alberta">Alberta</option>
+                        <option value="colombie-britannique">Colombie-Britannique</option>
+                        <option value="ipe">Île-du-Prince-Édouard</option>
+                        <option value="manitoba">Manitoba</option>
+                        <option value="nouveau-brunswick">Nouveau-Brunswick</option>
+                        <option value="nouvelle-ecosse">Nouvelle-Écosse</option>
+                        <option value="nunavut">Nunavut</option>
+                        <option value="ontario">Ontario</option>
+                        <option value="quebec">Québec</option>
+                        <option value="saskatchewan">Saskatchewan</option>
+                        <option value="terre-neuve">Terre-Neuve-et-Labrador</option>
+                        <option value="territoires-du-nord-ouest">Territoires du Nord-Ouest</option>
+                        <option value="yukon">Yukon</option>
                     </select>
                 </div>
                 <div>
                     <label for="pays">Pays</label>
-                    <input type="text" id="pays" name="pays" placeholder="Canada">
+                    <!-- Est-ce qu'on met Canada en readonly? (pas modifiable par user)-->
+                    <input type="text" id="pays" name="pays" placeholder="Canada" readonly>
                 </div>
                 <div>
                     <label for="code_postal">Code Postal</label>
-                    <input type="text" id="code_postal" name="code_postal">
+                    <input type="text" id="code_postal" name="code_postal" pattern="[A-Za-z]{1}[0-9]{1}[A-Za-z]{1} [0-9]{1}[A-Za-z]{1}[0-9]{1}">
                 </div>
         </fieldset>
 <!-- Couleur - Images - Mois - Semaine -->
@@ -94,11 +106,11 @@
                 </div>
                 <div>
                     <label for="images">Vos images préférées?</label>
-                    <input type="file" id="images" name="images" multiple>
+                    <input type="file" id="images" name="images" accept=".jpg, .jpeg, .png" multiple>
                 </div>
                 <div>
                     <label for="mois_annee">Votre mois préféré? De quelle année?</label>
-                    <input type="month" id="mois_annee" class="mois_annee" maxlength="4">
+                    <input type="month" id="mois_annee" class="mois_annee">
                 </div>
                 <div>
                     <label for="semaine">Votre semaine préférée de tous les temps?</label>
@@ -107,61 +119,62 @@
         </fieldset>
 <!-- Site - - URL - Datetime - Checkbox  -->
         <fieldset class="site_spectacle">
+            <div>
+                <label for="site">Un site que nous devons découvrir?</label>
+                <input type="url" id="site" name="site">
+            </div>
+            <div>
+                <!-- Demander si on doit mettre le tiret entre lui et donnez -->
+                <!-- Changer le visuel de la ligne -->
+                <label for="note_site">Quelle note lui donnez-vous?</label>
+                <input type="range" id="note_site" name="note_site" step="10">
+            </div>
+        </fieldset>
+        <fieldset class="show">
+            <div>
+                <label for="date_show">La date et l'heure du show que tu veux venir voir?</label>
+                <input type="datetime-local" id="date_show" name="date_show">
+            </div>
+            <div class="checkbox">
+                <p>Durant ce show, tu veux...</p>
                 <div>
-                    <label for="site">Un site que nous devons découvrir?</label>
-                    <input type="url" id="site" name="site">
+                    <label for="danser">Danser</label>
+                    <input type="checkbox" id="danser" name="danser" value="danser">
                 </div>
                 <div>
-                    <!-- Demander si on doit mettre le tiret entre lui et donnez -->
-                    <!-- Changer le visuel de la ligne -->
-                    <label for="note_site">Quelle note lui donnez-vous?</label>
-                    <input type="range" id="note_site" name="note_site" step="10">
+                    <label for="groover">Groover</label>
+                    <input type="checkbox" id="groover" name="groover" value="groover">
                 </div>
                 <div>
-                    <label for="date_show">La date et l'heure du show que tu veux venir voir?</label>
-                    <input type="datetime-local" id="date_show" name="date_show">
+                    <label for="coucher_tard">Me coucher tard</label>
+                    <input type="checkbox" id="coucher_tard" name="coucher_tard" value="coucher_tard"> 
                 </div>
-                <div class="checkbox">
-                    <p>Durant ce show, tu veux...</p>
-                    <div>
-                        <label for="danser">Danser</label>
-                        <input type="checkbox" id="danser" name="danser">
-                    </div>
-                    <div>
-                        <label for="groover">Groover</label>
-                        <input type="checkbox" id="groover" name="groover">
-                    </div>
-                    <div>
-                        <label for="coucher_tard">Me coucher tard</label>
-                        <input type="checkbox" id="coucher_tard" name="coucher_tard"> 
-                    </div>
-                </div>
+            </div>
         </fieldset>
 <!-- Radio (membres préférés) -->
 <!-- Class  membres_preferes a revoir -->
         <fieldset class="membres_preferes">
             <legend>Votre membre du groupe préféré?</legend>
                 <div>
-                    <input type="radio" id="jasmine" name="membre" value="alain">
+                    <input type="radio" id="jasmine" name="membre-prefere" value="alain-jasmine">
                     <label for="jasmine">Alain Jasmine</label>
                 </div>
                 <div>
-                    <input type="radio" id="danger" name="membre" value="jacques">
+                    <input type="radio" id="danger" name="membre-prefere" value="jacques-dander">
                     <label for="danger">Jacques Danger</label>
                 </div>
                 <div>
-                    <input type="radio" id="dove" name="membre" value="dove">
+                    <input type="radio" id="dove" name="membre-prefere" value="dove">
                     <label for="dove">Dove</label>
                 </div>
                 <div>
-                    <input type="radio" id="dr" name="membre" value="homme"> 
+                    <input type="radio" id="dr" name="membre-prefere" value="dr-homme"> 
                     <label for="dr">Dr Homme</label>
                 </div>          
         </fieldset>
 <!-- Mot de passsssssssssssssse -->
-        <!-- Rajouter la validation du mot de passe surement en JS. Kaput Draconis-->
         <label for="mot_de_passe" class="mot_de_passe">Mot de paaaaaaaaaasse?</label>
-        <input type="password" id="mot_de_passe" class="mot_de_passe">
+        <input type="password" id="mot_de_passe" class="mot_de_passe" pattern="Kaput Draconis">
         <div class="boutons">
             <button type="reset">Réinitialiser</button>
             <button type="submit">Soumettre</button>
