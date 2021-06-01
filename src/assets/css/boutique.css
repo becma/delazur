@@ -1,21 +1,3 @@
-
-
-
-/* Temporaire ( pour pouvoir voir dequoi)*/
-img {
-    width: 200px;
-}
-
-abbr {
-    text-decoration: none;
-}
-
-td {
-    text-align: center;
-}
-/* Fin Temporaire */
-
-
 * {
     transition: all 0.5s ease-in-out;
 }
@@ -100,13 +82,6 @@ header li a.active, header li a:visited {
     pointer-events: none;
 }
 
-.panierAchat {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-    font-size: 3rem;
-}
-
 h2 {
     font-family: 'Damion', cursive;
     color: #f5c555;
@@ -120,10 +95,12 @@ h3 {
     text-transform: uppercase;
 }
 
-main tr:first-child > th:first-child {
-    color: #f5c555;
-    text-transform: uppercase;
-    text-align: left;
+img {
+    width: 200px;
+}
+
+abbr {
+    text-decoration: none;
 }
 
 button {
@@ -132,21 +109,89 @@ button {
     text-transform: uppercase;
     font: 1rem 'Montserrat', sans-serif;
     padding: 5px;
-    margin-right: 10px;
+    margin: auto;
 }
 
-table {
+sub#nombreDeProduitsDansLePanier {
+    margin: 0 10px 0 -0.9rem;
+    color: black;
+    font-size:1.1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    background-color: #d679a6;
+    z-index: 2;
+    
+}
+
+section tr:first-child > th:first-child {
+    color: #f5c555;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+section table {
     margin: auto;
     padding-bottom: 50px;
 }
 
-td, th, p {
+section td, section th, section p {
     font: 1.1rem 'Montserrat', sans-serif;
     padding-bottom: 5px;
 }
 
-tr, td {
+section tr, section td {
     text-align: center;
+}
+
+div.panier-ouvert {
+    width:200px;
+    background-color: #fff;
+    color: black;
+}
+
+#panierAchat-tb:not(.panier-ouvert) {
+    display: none;
+}
+
+#panierAchat-tb.panier-ouvert {
+    width: 100%;
+    margin:0;
+    padding:10px;
+    text-align: left;
+}
+
+#panierAchat-tb td, #panierAchat-tb th {
+    font-size: 1.1rem;
+    margin:0;
+    padding:0;
+    font-size: 1.1rem;
+    color:black;
+    text-align: left;
+}
+
+#panierAchat-tb th {
+    
+    font-weight: bold;
+}
+
+#panierAchat-th {
+    color: black;
+    text-transform: uppercase;
+    text-align: left;
+    
+}
+
+.panierAchat {
+    position: absolute;
+    right: 20px;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+.panierAchat > div:first-child {
+    display: flex;
+    justify-content: flex-end;
+    padding:10px 10px 0 0;
 }
 
 .chandails {
