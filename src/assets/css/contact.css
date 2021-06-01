@@ -59,6 +59,31 @@ input {
 	padding: 0;
 }
 
+input[type=range] {
+	background: #d679ab;
+	border-radius: 10px;
+	height: 10px;
+	-webkit-appearance: none; 
+	width: 100%; 
+}
+
+/* -webkit-slider-thumb n'est pas standard ni en voie de standardisation. 
+Ne pas utiliser pour un site accessible https://developer.mozilla.org/fr/docs/Web/CSS/::-webkit-slider-thumb*/
+
+/* Présentement ça marche sur firefox mais pas chrome. Allons nous avoir besoin d'un media query ? 
+https://stackoverflow.com/questions/18389224/how-to-style-html5-range-input-to-have-different-color-before-and-after-slider */
+input[type=range]::-moz-range-thumb, 
+input[type=range]::-webkit-slider-thumb  { 
+	appearance: none;
+	border-radius: 50%;
+	cursor: pointer; 
+	background: #f5c555; 
+	border-radius: 2px solid #d679ab;
+	height: 35px; 
+	-webkit-appearance: none; 
+	width: 35px; 
+}
+
 /* .checkbox { 
 	margin-top: 30px;
 } */
