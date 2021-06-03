@@ -4,6 +4,7 @@ main {
 	padding: 30px;
 }
 
+
 main div {
 	margin: 30px 0;
 }
@@ -26,6 +27,7 @@ legend {
 /* Re-ajuster bon margin */
 label { 
 	display: block;
+	padding-bottom: 0;
 }
 
 /* width a re-évaluer */
@@ -59,14 +61,13 @@ input {
 #couleur { 
 	border: none;width: 50px;
 	height: 50px;
-	
 	margin-left: 15px;
+	margin-top: 15px;
 	padding: 0;
 }
 
 input[type=range] {
 	background: #d679ab;
-	border-bottom: 1.5px solid #000;
 	border-radius: 10px;
 	height: 10px;
 	margin: 15px;
@@ -100,19 +101,20 @@ input[type=range]::-webkit-slider-thumb  {
 	display: inline;
 }
 
-/* .membres_preferes {
+.membres_preferes {
 	display: flex;
 	flex-direction: column;
-} */
+}
 /* a revoir */
 .membres_preferes > div { 
-	/* display: flex; */
-	margin-left: 45px;
+	display: flex;
+	margin: 0 45px;
 	width: 200px;
 }
 
 .membres_preferes > div > input {
 	height: 15px;
+	margin: 5px;
 	width: 15px;
 }
 
@@ -240,7 +242,8 @@ button:hover {
 	}
 
 	.membres_preferes {
-		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
 		padding: 50px 0;
 		width: 100%;
 	}
@@ -248,9 +251,10 @@ button:hover {
 	.membres_preferes div {
 		width: 100%;
 	}
-	.membres_preferes div input{
+	/* J'ai défini la grandeur de input radio en mobile */
+	/* .membres_preferes div input{
 		width: 13px;
-	}
+	} */
 
 	.show {
 		display: flex;
