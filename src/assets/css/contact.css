@@ -4,6 +4,10 @@ main {
 	padding: 30px;
 }
 
+main div {
+	margin: 30px 0;
+}
+
 fieldset { 
 	/* Retrouver le bon rose et le bon margin*/
 	border-color: #d679ab;
@@ -32,6 +36,7 @@ input {
 	/* margin-top: 10px; */
 	width: 85%;
 	margin: 0 auto;
+	padding: 15px 10px;
 }
 
 .adresse { 
@@ -52,17 +57,20 @@ input {
 }
 
 #couleur { 
-	width: 50px;
+	border: none;width: 50px;
 	height: 50px;
-	border: none;
+	
 	margin-left: 15px;
 	padding: 0;
 }
 
 input[type=range] {
 	background: #d679ab;
+	border-bottom: 1.5px solid #000;
 	border-radius: 10px;
 	height: 10px;
+	margin: 15px;
+	padding: 0;
 	-webkit-appearance: none; 
 	width: 100%; 
 }
@@ -92,15 +100,26 @@ input[type=range]::-webkit-slider-thumb  {
 	display: inline;
 }
 
+/* .membres_preferes {
+	display: flex;
+	flex-direction: column;
+} */
 /* a revoir */
 .membres_preferes > div { 
+	/* display: flex; */
 	margin-left: 45px;
+	width: 200px;
+}
+
+.membres_preferes > div > input {
+	height: 15px;
+	width: 15px;
 }
 
 /* a revoir */
 .membres_preferes > div > label {
 	display: inline;
-  }
+}
 
 .mot_de_passe { 
 	margin-left: 20px;
