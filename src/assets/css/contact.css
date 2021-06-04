@@ -4,13 +4,11 @@ main {
 	padding: 30px;
 }
 
-
 main div {
 	margin-top: 30px;
 }
 
 fieldset { 
-	/* Retrouver le bon rose et le bon margin*/
 	border-color: #d679ab;
 	margin-bottom: 30px;
 }
@@ -24,18 +22,15 @@ legend {
 	display: flex;
 }
 
-/* Re-ajuster bon margin */
 label { 
 	display: block;
 	padding-bottom: 0;
 }
 
-/* width a re-évaluer */
 input {
 	border: none;
 	border-bottom: 1.5px solid #000;
 	background: transparent;
-	/* margin-top: 10px; */
 	width: 85%;
 	margin: 0 auto;
 	padding: 15px 10px;
@@ -48,9 +43,9 @@ input {
 #province { 
 	background: transparent;
 	height: 50px;
-	width: 200px;
 	border: 1px solid #000;
 	padding-left: 10px; 
+	width: 200px;
 }
 
 .preferences, 
@@ -92,23 +87,6 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 10px;
   width: 100%;
 }
-  
-.checkbox > div > label {
-	display: inline;
-}
-
-.membres_preferes {
-	display: flex;
-	flex-direction: column;
-}
-/* a revoir */
-.membres_preferes > div { 
-	display: flex;
-	align-items: center;
-	height: 20px;
-	margin: 5px 45px;
-	width: 200px;
-}
 
 .checkbox  {
 	display: flex;
@@ -133,9 +111,17 @@ input[type=range]::-webkit-slider-runnable-track {
 	width: 20px;
 }
 
-/* a revoir */
-.membres_preferes > div > label {
-	display: inline;
+.membres_preferes {
+	display: flex;
+	flex-direction: column;
+}
+
+.membres_preferes > div { 
+	display: flex;
+	align-items: center;
+	height: 20px;
+	margin: 5px 45px;
+	width: 200px;
 }
 
 .mot_de_passe { 
@@ -158,33 +144,17 @@ button {
 	margin-top: 50px;
 }
 
+button:focus,
 button:hover { 
 	background: #d679ab8c;
+	border: 3px solid #d679ab8c;
 }
 
 ::placeholder {
 	color: black;
 }
 
-/* pseudo-classe :valid :invalid */
-
 @media screen and (min-width: 1200px) {
-
-	/* fieldset {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-	} */
-
-	/* Fieldset ne peux pas être en grid ou en flex. 
-    https://developer.mozilla.org/fr/docs/Web/HTML/Element/Fieldset  */
-
-	/* .informations_generales { 
-		display: grid;
-		grid-template-rows: 1 / 5;
-		grid-template-columns: 1 / 3;
-	} */
-
 	.informations_generales {
 		display: flex;
 		flex-wrap: wrap;
@@ -222,7 +192,6 @@ button:hover {
 		justify-content: center;
 	} 
 
-	/* canada semble être écrit un peu haut */
 	.adresse  div   {
 		margin-right: 20px;
 		width: 100%;
@@ -262,15 +231,9 @@ button:hover {
 	.membres_preferes div {
 		width: 100%;
 	}
-	/* J'ai défini la grandeur de input radio en mobile */
-	/* .membres_preferes div input{
-		width: 13px;
-	} */
 
 	.show {
 		display: flex;
-		/* déplacé en version mobile */
-		/* border: none; */
 		padding-left: 20px;
 	}
 
@@ -291,9 +254,6 @@ button:hover {
 		height: 60px;
 	}
 	
-	/* Déplacé en mobile */
-	
-
 	.checkbox-boxes {
 		flex-direction: row;
 	}
@@ -302,12 +262,5 @@ button:hover {
 		width: 80%;
 	}
 
-	/* .checkbox label {
-		display: inline;
-		margin-right: 5px;
-	} */
-
 }
 
-/* faire le slider */
-/* rajouter du padding pour la section entre adresse et membre préféré et bien aligner */
