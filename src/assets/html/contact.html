@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Damion&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/assets/css/app.css">
-
 </head>
 <body>
 <header>
@@ -27,11 +26,7 @@
     </nav>
 </header> 
 <main>
-    <!-- Changer l'action -->
     <form action="#" id="formulaire" name="formulaire" method="GET" target="_blank">
-<!-- Informations générales -->
-<!-- Fieldset ne peux pas être en grid ou en flex. 
-    https://developer.mozilla.org/fr/docs/Web/HTML/Element/Fieldset -->
         <fieldset class="informations_generales">
             <legend>Informations générales</legend>
                 <div>
@@ -43,6 +38,7 @@
                     <input type="text" id="nom_de_famille" name="nom_de_famille" minlength="2">
                 </div>
                 <div>
+<!-- Pattern de courriel à ne pas oublier -->
                     <label for="courriel">Adresse courriel</label>
                     <input type="email" id="courriel" name="courriel" pattern="">
                 </div>
@@ -72,7 +68,6 @@
                 </div>
                 <div>
                     <label for="province">Province</label>
-                    <!-- Regarder pour plus de détails province, pays et code postal-->
                     <select id="province" name="province">
                         <option value="alberta">Alberta</option>
                         <option value="colombie-britannique">Colombie-Britannique</option>
@@ -91,7 +86,6 @@
                 </div>
                 <div>
                     <label for="pays">Pays</label>
-                    <!-- Est-ce qu'on met Canada en readonly? (pas modifiable par user)-->
                     <input type="text" id="pays" name="pays" placeholder="Canada" readonly>
                 </div>
                 <div>
@@ -125,8 +119,6 @@
                 <input type="url" id="site" name="site">
             </div>
             <div>
-                <!-- Demander si on doit mettre le tiret entre lui et donnez -->
-                <!-- Changer le visuel de la ligne -->
                 <label for="note_site">Quelle note lui donnez-vous?</label>
                 <input type="range" id="note_site" name="note_site" step="10">
             </div>
@@ -155,7 +147,6 @@
             </div>
         </fieldset>
 <!-- Radio (membres préférés) -->
-<!-- Class  membres_preferes a revoir -->
         <fieldset class="membres_preferes">
             <legend>Votre membre du groupe préféré?</legend>
                 <div>
