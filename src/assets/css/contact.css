@@ -4,8 +4,9 @@ main {
 	padding: 30px;
 }
 
+
 main div {
-	margin: 30px 0;
+	margin-top: 30px;
 }
 
 fieldset { 
@@ -26,6 +27,7 @@ legend {
 /* Re-ajuster bon margin */
 label { 
 	display: block;
+	padding-bottom: 0;
 }
 
 /* width a re-évaluer */
@@ -51,7 +53,9 @@ input {
 	padding-left: 10px; 
 }
 
-.preferences, .site_spectacle { 
+.preferences, 
+.site_spectacle, 
+.show { 
 	border: none;
 	padding-left: 20px;
 }
@@ -59,57 +63,74 @@ input {
 #couleur { 
 	border: none;width: 50px;
 	height: 50px;
-	
 	margin-left: 15px;
+	margin-top: 15px;
 	padding: 0;
 }
 
-  input[type=range] {
-	  background: transparent; 
-	  -webkit-appearance: none; 
-  } 
+input[type=range] {
+	background: transparent; 
+	-webkit-appearance: none; 
+	width: 90%;
+} 
 
-  input[type=range]::-webkit-slider-thumb {
-	  border: 1px solid #d679ab; 
-	  border-radius: 50%;
-	  background: #f5c555;
-	  cursor: pointer;
-	  height: 30px;
-	  transform: translateY(-35%);
-	  -webkit-appearance: none;
-	  width: 30px;
-  }
-  
-  input[type=range]::-webkit-slider-runnable-track {
-	  background: #d679ab;
-	  border-radius: 10px;
-	  cursor: pointer;
-	  height: 10px;
-	  width: 100%;
-  }
-  
-/* .checkbox { 
-	margin-top: 30px;
-} */
+input[type=range]::-webkit-slider-thumb {
+	border: 1px solid #d679ab; 
+	border-radius: 50%;
+	background: #f5c555;
+	cursor: pointer;
+	height: 30px;
+	transform: translateY(-35%);
+	-webkit-appearance: none;
+	width: 30px;
+}
 
+input[type=range]::-webkit-slider-runnable-track {
+  background: #d679ab;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 10px;
+  width: 100%;
+}
+  
 .checkbox > div > label {
 	display: inline;
 }
 
-/* .membres_preferes {
+.membres_preferes {
 	display: flex;
 	flex-direction: column;
-} */
+}
 /* a revoir */
 .membres_preferes > div { 
-	/* display: flex; */
-	margin-left: 45px;
+	display: flex;
+	align-items: center;
+	height: 20px;
+	margin: 5px 45px;
 	width: 200px;
 }
 
+.checkbox  {
+	display: flex;
+	flex-direction: column;
+}
+
+.checkbox-boxes {
+	display: flex;
+	flex-direction: column;
+}
+
+.checkbox-boxes div {
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+
+.checkbox div input,
 .membres_preferes > div > input {
-	height: 15px;
-	width: 15px;
+	height: 20px;
+	margin: 5px;
+	width: 20px;
 }
 
 /* a revoir */
@@ -119,6 +140,7 @@ input {
 
 .mot_de_passe { 
 	margin-left: 20px;
+	width: 70%;
 }
 
 .boutons { 
@@ -206,11 +228,6 @@ button:hover {
 		width: 100%;
 	}
 
-	/* On peut essayer de trouver une meilleure manière de l'aligner ?  */
-	.adresse input {
-		height: 47px;
-	}
-
 	.preferences {
 		display: flex;
 		justify-content: space-around;
@@ -236,7 +253,8 @@ button:hover {
 	}
 
 	.membres_preferes {
-		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
 		padding: 50px 0;
 		width: 100%;
 	}
@@ -244,13 +262,15 @@ button:hover {
 	.membres_preferes div {
 		width: 100%;
 	}
-	.membres_preferes div input{
+	/* J'ai défini la grandeur de input radio en mobile */
+	/* .membres_preferes div input{
 		width: 13px;
-	}
+	} */
 
 	.show {
 		display: flex;
-		border: none;
+		/* déplacé en version mobile */
+		/* border: none; */
 		padding-left: 20px;
 	}
 
@@ -271,26 +291,21 @@ button:hover {
 		height: 60px;
 	}
 	
-	.checkbox  {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+	/* Déplacé en mobile */
+	
+
+	.checkbox-boxes {
+		flex-direction: row;
 	}
 
-	.checkbox div {
-		display: flex;
-		align-items: flex-end;
+	.checkbox-boxes div {
+		width: 80%;
 	}
 
-	.checkbox div input {
-		width: 20px;
-		height: 20px;
-	}
-
-	.checkbox label {
+	/* .checkbox label {
 		display: inline;
 		margin-right: 5px;
-	}
+	} */
 
 }
 
