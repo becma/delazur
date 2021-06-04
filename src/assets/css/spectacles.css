@@ -1,0 +1,63 @@
+body {
+    color: white;
+}
+
+.abonner {
+    background-color: #f5c555;
+    font-size: 30px;
+    text-align: center;
+    padding: 1px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_courriel {
+    display: none;
+    position: relative;
+    flex-flow: column;
+    background-color: #f5c555;
+    padding: 0px 15px 15px 30px;
+}
+
+#courriel {
+    border: none;
+    border-bottom: solid 1px black;
+    background-color: #f5c555;
+    color: black;
+}
+
+.modal_courriel_merci {
+    align-self: center;
+    position: relative;
+    width: 25%;
+    display: none;
+    flex-flow: column;
+    background-color: #f5c555;
+    padding: 0px 15px 15px 30px;
+}
+
+.modal_courriel_merci > div, .modal_courriel > div {
+    align-self: center;
+}
+
+.fermerLaFenetre {
+    align-self: flex-end;
+    color: black;
+}
+
+button {
+    border: none;
+    margin: 20px;
+    padding: 15px;
+}
