@@ -22,6 +22,9 @@ img {
 h2 {
     font-size: 4rem;
 }
+
+/* CARTE SPOTIFY */
+
 .spotify > p:nth-child(2) {
     font-weight: bold;
 }
@@ -34,5 +37,5 @@ h2 {
     background-color:#CC9932;
 }
 .album{
-    max-width: 30%;
+    width: 200px;
 }
