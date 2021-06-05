@@ -1,3 +1,38 @@
 caption {
     display: none;
 }
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+body > div {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+body > div > div {
+    flex-grow: 1;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+h2 {
+    font-size: 4rem;
+}
+.spotify > p:nth-child(2) {
+    font-weight: bold;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px ;
+    border: 1px solid #CC9932;
+    color: black;
+    background-color:#CC9932;
+}
+.album{
+    max-width: 30%;
+}
