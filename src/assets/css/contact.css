@@ -1,7 +1,7 @@
 main { 
 	background: #f5c555;
 	color: #fff;
-	padding: 30px;
+	padding: 40px;
 }
 
 main div {
@@ -9,8 +9,8 @@ main div {
 }
 
 fieldset { 
-	border-color: #d679ab;
-	margin-bottom: 30px;
+	border: 2px solid #e47cb3;
+	margin-bottom: 40px;
 }
 
 fieldset:nth-child(2) { 
@@ -19,21 +19,20 @@ fieldset:nth-child(2) {
 
 legend { 
 	text-align: center;
-	display: flex;
 }
 
-label { 
+label, main p { 
+	font-size: 1.7rem;
 	display: block;
-	padding-bottom: 0;
 }
 
 input {
 	border: none;
-	border-bottom: 1.5px solid #000;
+	border-bottom: 1px solid #000;
 	background: transparent;
-	width: 85%;
-	margin: 0 auto;
+	font-family: 'Montserrat', sans-serif;
 	padding: 15px 10px;
+	width: 85%;
 }
 
 .adresse { 
@@ -41,36 +40,40 @@ input {
 }
 
 #province { 
+	font-family: 'Montserrat', sans-serif;
 	background: transparent;
 	height: 50px;
 	border: 1px solid #000;
-	padding-left: 10px; 
-	width: 200px;
+	padding-left: 15px;
+	width: 250px;
+}
+
+::placeholder {
+	color: black;
 }
 
 .preferences, 
 .site_spectacle, 
-.show { 
+.show, 
+.mot_de_passe { 
 	border: none;
-	padding-left: 20px;
+	margin-left: 20px;
 }
 
 #couleur { 
-	border: none;width: 50px;
+	border: none;
+	width: 50px;
 	height: 50px;
-	margin-left: 15px;
-	margin-top: 15px;
-	padding: 0;
 }
 
 input[type=range] {
 	background: transparent; 
-	-webkit-appearance: none; 
+	-webkit-appearance: none;
 	width: 90%;
 } 
 
 input[type=range]::-webkit-slider-thumb {
-	border: 1px solid #d679ab; 
+	border: 1px solid #e47cb3; 
 	border-radius: 50%;
 	background: #f5c555;
 	cursor: pointer;
@@ -81,67 +84,53 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  background: #d679ab;
-  border-radius: 10px;
-  cursor: pointer;
-  height: 10px;
-  width: 100%;
-}
-
-.checkbox  {
-	display: flex;
-	flex-direction: column;
-}
-
-.checkbox-boxes {
-	display: flex;
-	flex-direction: column;
+	background: #e47cb3;
+	border-radius: 10px;
+	cursor: pointer;
+	height: 10px;
 }
 
 .checkbox-boxes div {
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	margin: 0;
 }
 
-.checkbox div input,
-.membres_preferes > div > input {
+.checkbox div input {
 	height: 20px;
-	margin: 5px;
 	width: 20px;
+	margin-left: 8px;
 }
 
-.membres_preferes {
-	display: flex;
-	flex-direction: column;
+.membres_preferes div input {
+	height: 13px;
+	width: 13px;
+	margin: 0 8px 0 0;
 }
 
-.membres_preferes > div { 
+.membres_preferes div { 
 	display: flex;
-	align-items: center;
-	height: 20px;
-	margin: 5px 45px;
-	width: 200px;
+	align-items: flex-start;
+	margin: 3px 45px;
 }
 
 .mot_de_passe { 
-	margin-left: 20px;
-	width: 70%;
+	padding-top: 40px;
+	width: 80%;
 }
 
 .boutons { 
 	display: flex;
 	justify-content: space-around; 
-	width: 300px;
-	margin: auto;
+	width: 350px;
+	margin: 50px auto;
 }
 
 button { 
 	background: transparent;
-	height: 40px;
+	height: 45px;
 	width: 120px;
 	border: 1px solid #000;
-	margin-top: 50px;
 }
 
 button:focus,
@@ -150,117 +139,133 @@ button:hover {
 	border: 3px solid #d679ab8c;
 }
 
-::placeholder {
-	color: black;
-}
-
 @media screen and (min-width: 1200px) {
+
+	main div {
+		margin-top: 40px;
+	}
+	
 	.informations_generales {
 		display: flex;
 		flex-wrap: wrap;
 		padding: 50px;
 	}
-	/* regarder pour une valeur pas absolu */
+
 	.informations_generales div {
-		flex-basis: 200px;
-		flex-grow: 1;
+		width: 50%;
 	}
 
 	.informations_generales > div:nth-child(4),
 	.informations_generales > div:nth-child(7) {
-		flex-basis: 1200px;
-	}
-
-	.informations_generales label {
-		padding-bottom: 25px;
-		margin-top: 30px;
-	}
-
-	.informations_generales > input[type=text],
-		input[type=date],
-		input[type=number] {
-		width: 420px;
-	}
-
-	input {
-		max-width: 1200px;
+		width: 100%;
 	}
 
 	.adresse {
 		display: flex;
-		align-items: flex-end;
-		justify-content: center;
+		justify-content: space-between;
 	} 
 
-	.adresse  div   {
-		margin-right: 20px;
-		width: 100%;
+	.adresse div {
+		margin-right: 30px;
+	}
+	
+	.checkbox label {
+		font-size: 1.2rem;
 	}
 
-	.preferences {
+	/* ------------ Version flex ---------------- */
+	
+	/* .preferences {
 		display: flex;
 		justify-content: space-around;
-		margin-top: 50px;
+		padding: 0 50px;
+		margin: 0 0 30px 0;
 	}
 
-	.preferences label {
-		padding-bottom: 20px;
+	.preferences div {
+		width: 25%;
 	}
 
 	.site_spectacle {
 		display: flex;
-		flex-wrap: wrap;
+		padding: 0 50px;
+		margin: 0 0 30px 0;
 	}
 
 	.site_spectacle div {
-		flex-grow: 1;
-		flex-basis: 450px;
+		width: 50%;
 	}
 
 	.site_spectacle label {
 		padding-bottom: 20px;
 	}
 
-	.membres_preferes {
-		flex-direction: row;
-		justify-content: space-around;
-		padding: 50px 0;
-		width: 100%;
-	}
-
-	.membres_preferes div {
-		width: 100%;
-	}
-
 	.show {
 		display: flex;
-		padding-left: 20px;
-	}
-
-	.show p {
-		width: 100%;
-		margin: 0;
+		padding: 0 50px;
+		margin: 0 0 40px 0;
 	}
 
 	.show > div {
 		width: 50%;
 	}
 
-	.show label {
-		margin-top: 0;
+	.show p {
+		margin: 0;
 	}
 
-	#date_show {
-		height: 60px;
+	.checkbox-boxes {
+		display: flex; 
+		justify-content: space-between;
+		margin-top: 30px;
+		padding-right: 50px;
+	} */
+	
+	/* ------------- Version grid ------------------- */
+
+	.preferences {
+		display: grid;
+		column-gap: 100px;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		margin: 0 0 40px 0;
+		padding: 0 50px;
 	}
 	
+	.site, .show {
+		grid-column: 1 / 3;
+		margin-left: 0;
+	}
+	
+	.note, .checkbox {
+		grid-column: 3 / 5;	
+	}
+	
+	.checkbox p {
+		margin: 0;
+	}
+
 	.checkbox-boxes {
-		flex-direction: row;
+		display: flex; 
+		justify-content: space-between;
+		padding-right: 50px;
+		margin-top: 30px;
 	}
 
-	.checkbox-boxes div {
-		width: 80%;
+	/* ------------------------ */
+
+	.membres_preferes {
+		display: flex;
+		justify-content: space-between;
+		padding: 50px;
 	}
 
+	.membres_preferes div {
+		display: flex;
+		align-items: center;
+	}
+
+	.mot_de_passe {
+		width: 100%;
+	}
 }
-
