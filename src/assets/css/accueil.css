@@ -36,3 +36,23 @@ h2 {
 .album{
     max-width: 30%;
 }
+.membres {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.overlay {
+    position: static;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+  }
+  .container:hover .overlay {
+    opacity: .90;
+  }
+  .container {
+ position: static;
+ width: 100%;
+ height: auto;
+  }
