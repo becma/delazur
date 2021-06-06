@@ -114,6 +114,11 @@ button {
 	margin: auto;
 }
 
+button:hover, button:focus {
+    color: #ffc503;
+    cursor: pointer;
+}
+
 sub#nombreDeProduitsDansLePanier {
 	margin: 0 10px 0 -0.9rem;
 	color: black;
