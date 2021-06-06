@@ -27,23 +27,24 @@
     <main>
         <div class="panierAchat">
             <div id="bascule-panier">
-                <i id="iconeDuPanierDAchat" class="fas fa-shopping-cart" aria-hidden="true"><sub id="nombreDeProduitsDansLePanier">3</sub></i>
+                <i id="iconeDuPanierDAchat" class="fas fa-shopping-cart" aria-hidden="true"><sub id="nombreDeProduitsDansLePanier">0</sub></i>
             </div>
             <table id="panierAchat-tb">
-                <tr>
-                    <th id="panierAchat-th" colspan="4">Panier d'achat</th>
-                </tr>
-                <tr>
-                    <th headers="panierAchat-th" colspan="4" id="premier-item">Nobody Loves Like I Do</th>
-                </tr>
-                <tr>
-                    <td headers="panierAchat-th premier-item" colspan="1">Vinyle</td>
-                    <td headers="panierAchat-th premier-item" colspan="1">30$</td>
-                    <td headers="panierAchat-th premier-item" colspan="2"><a href="#">Retirer du panier</a></td>
-                </tr>
-                <!-- <tr>
-                    <td><hr></td>
-                </tr> -->
+                <thead>
+                    <tr>
+                        <th id="panierAchat-th" colspan="4">Panier d'achat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <th headers="panierAchat-th" colspan="4" id="premier-item">Nobody Loves Like I Do</th>
+                    </tr>                    
+                    <tr>
+                        <td headers="panierAchat-th premier-item" colspan="1">Vinyle</td>
+                        <td headers="panierAchat-th premier-item" colspan="1">30$</td>
+                        <td headers="panierAchat-th premier-item" colspan="2"><a href="#">Retirer du panier</a></td>
+                    </tr> -->
+                </tbody>
             </table>
         </div>
         <h2>Boutique</h2>
@@ -269,7 +270,7 @@
             <p>GR.06 - Juin 2021</p>
         </div>
     </footer>
-    <script src="./assets/scripts/boutique.js"></script>
+    <script type="module" src="./assets/scripts/boutique.js"></script>
 </body>
 
 </html>
