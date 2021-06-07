@@ -1,3 +1,5 @@
+/* ---- Général ---- */
+
 * {
     transition: all 0.5s ease-in-out;
 }
@@ -25,6 +27,13 @@ body {
 main {
     grid-column: 1 / 6;
 }
+
+.serif {
+    font-family: 'Damion', serif;
+}
+
+
+/* ---- Header ---- */
 
 header {
     grid-column: 1 / 6;
@@ -82,6 +91,20 @@ header li a.active {
     pointer-events: none;
 }
 
+
+/* ---- Main ---- */
+
+body > main > h2 {
+    letter-spacing: 10px;
+    text-align: center;
+    color: #d679a6;
+    text-transform: uppercase;
+    font-size: 6rem;
+}
+
+
+/* ---- DIV ---- */
+
 body > main > div {
     background: #826644;
     margin: 50px;
@@ -96,7 +119,7 @@ body > main > div {
     height: 160px;
 }
 
-body > main > div > a {
+body > main > div > button {
     background: pink;
     border-style: solid;
     border-color: #f5c555;
@@ -106,35 +129,14 @@ body > main > div > a {
     text-transform: uppercase;
 }
 
-body > main > div > a:hover {
+body > main > div > button:hover {
     background-color: white;
 }
 
-button {
+.bouton_soumettre, .bouton_fermer {
     border: none;
     margin: 20px;
     padding: 15px;
-}
-
-.abonner {
-    font-size: 2rem;
-    letter-spacing: 10px;
-    background-color: #f5c555;
-    text-align: center;
-    border-style: none;
-    text-transform: uppercase;
-}
-
-.serif {
-    font-family: 'Damion', serif;
-}
-
-body > main > h2 {
-    letter-spacing: 10px;
-    text-align: center;
-    color: #d679a6;
-    text-transform: uppercase;
-    font-size: 6rem;
 }
 
 body > main > div > a:link {
@@ -151,6 +153,10 @@ time {
     font-weight: bold;
     font-size: 2rem;
 }
+
+
+
+/* ---- Footer ---- */
 
 footer {
     background-color: rgba(0, 0, 0, 0.5);
@@ -197,7 +203,23 @@ footer div:last-child {
     text-align: right;
 }
 
+
+
+/* ----  Modal ---- */
+
+.abonner {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    background-color: #f5c555;
+    text-align: center;
+    border-style: none;
+    text-transform: uppercase;
+}
+
 .modal {
+    margin: 0;
+    padding: 0;
+    border: none;
     display: none;
     position: fixed;
     align-items: center;
@@ -205,8 +227,8 @@ footer div:last-child {
     padding-top: 50px;
     left: 0; 
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -243,6 +265,15 @@ footer div:last-child {
     align-self: flex-end;
     color: black;
 }
+
+.bouton_soumettre, .bouton_fermer {
+    border: none;
+    margin: 20px;
+    padding: 15px;
+}
+
+
+/* ---- Media Queries ---- */
 
 @media screen and (min-width: 800px) {
     main {
