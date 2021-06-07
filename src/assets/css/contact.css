@@ -130,11 +130,6 @@ input[type=range]::-webkit-slider-runnable-track {
 	width: 80%;
 }
 
-.mot_de_passe > p {
-	color: #e47cb3;
-	font-weight: bold;
-}
-
 .boutons { 
 	display: flex;
 	justify-content: space-around; 
