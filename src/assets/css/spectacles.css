@@ -1,3 +1,5 @@
+/* ---- Général ---- */
+
 * {
     transition: all 0.5s ease-in-out;
 }
@@ -26,28 +28,12 @@ main {
     grid-column: 1 / 6;
 }
 
-@media screen and (min-width: 800px) {
-    body {
-        grid-template-columns: repeat(16, 1fr);
-        grid-row-gap: 50px;
-    }
-
-    main {
-        grid-column: 2 / 16;
-    }
+.serif {
+    font-family: 'Damion', serif;
 }
 
-@media screen and (min-width: 1224px) {
 
-    html {
-        font-size: 62.5%;
-    }
-
-    body {
-        background-attachment: fixed;
-        background-size: auto 100vh;
-    }
-}
+/* ---- Header ---- */
 
 header {
     grid-column: 1 / 6;
@@ -105,25 +91,19 @@ header li a.active {
     pointer-events: none;
 }
 
-@media screen and (min-width: 800px) {
-    header {
-        grid-column: 2 / 16;
-    }
 
-    header > nav > ul {
-        display: flex;
-    }
+/* ---- Main ---- */
+
+body > main > h2 {
+    letter-spacing: 10px;
+    text-align: center;
+    color: #d679a6;
+    text-transform: uppercase;
+    font-size: 6rem;
 }
 
-@media screen and (min-width: 1224px) {
-    header > div {
-        height: 100vh;
-    }
 
-    header > nav {
-        background-color: transparent;
-    }
-}
+/* ---- DIV ---- */
 
 body > main > div {
     background: #826644;
@@ -139,7 +119,7 @@ body > main > div {
     height: 160px;
 }
 
-body > main > div > a {
+body > main > div > button {
     background: pink;
     border-style: solid;
     border-color: #f5c555;
@@ -147,33 +127,18 @@ body > main > div > a {
     padding: 15px;
     align-self: flex-end;
     text-transform: uppercase;
-    
 }
 
-body > main > div > a:hover {
+body > main > div > button:hover {
     background-color: white;
 }
 
-.abonner {
-    font-size: 2rem;
-    letter-spacing: 10px;
-    background-color: #f5c555;
-    text-align: center;
-    border-style: none;
-    text-transform: uppercase;
+.bouton_soumettre, .bouton_fermer {
+    border: none;
+    margin: 20px;
+    padding: 15px;
 }
 
-.serif {
-    font-family: 'Damion', serif;
-}
-
-body > main > h2 {
-    letter-spacing: 10px;
-    text-align: center;
-    color: #d679a6;
-    text-transform: uppercase;
-    font-size: 6rem;
-}
 body > main > div > a:link {
     text-decoration: none;
     color: black;
@@ -188,6 +153,10 @@ time {
     font-weight: bold;
     font-size: 2rem;
 }
+
+
+
+/* ---- Footer ---- */
 
 footer {
     background-color: rgba(0, 0, 0, 0.5);
@@ -234,10 +203,120 @@ footer div:last-child {
     text-align: right;
 }
 
+
+
+/* ----  Modal ---- */
+
+.abonner {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    background-color: #f5c555;
+    text-align: center;
+    border-style: none;
+    text-transform: uppercase;
+}
+
+.modal {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    left: 0; 
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_courriel {
+    display: none;
+    position: relative;
+    flex-flow: column;
+    background-color: #f5c555;
+    padding: 0px 15px 15px 30px;
+}
+
+#courriel {
+    border: none;
+    border-bottom: solid 1px black;
+    background-color: #f5c555;
+    color: black;
+}
+
+.modal_courriel_merci {
+    align-self: center;
+    position: relative;
+    width: 25%;
+    display: none;
+    flex-flow: column;
+    background-color: #f5c555;
+    padding: 0px 15px 15px 30px;
+}
+
+.modal_courriel_merci > div, .modal_courriel > div {
+    align-self: center;
+}
+
+.fermerLaFenetre {
+    align-self: flex-end;
+    color: black;
+}
+
+.bouton_soumettre, .bouton_fermer {
+    border: none;
+    margin: 20px;
+    padding: 15px;
+}
+
+
+/* ---- Media Queries ---- */
+
+@media screen and (min-width: 800px) {
+    main {
+        grid-column: 2 / 16;
+    }
+
+    body {
+        grid-template-columns: repeat(16, 1fr);
+        grid-row-gap: 50px;
+    }
+
+    header {
+        grid-column: 2 / 16;
+    }
+
+    header > nav > ul {
+        display: flex;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        background-attachment: fixed;
+        background-size: auto 100vh;
+    }
+
+    header > div {
+        height: 100vh;
+    }
+
+    header > nav {
+        background-color: transparent;
     }
 }
