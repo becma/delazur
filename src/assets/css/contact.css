@@ -59,6 +59,10 @@ select:focus {
 	width: 200px;
 }
 
+#code_postal {
+	text-transform: uppercase;
+}
+
 ::placeholder {
 	color: black;
 }
