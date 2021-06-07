@@ -130,6 +130,12 @@ input[type=range]::-webkit-slider-runnable-track {
 	width: 80%;
 }
 
+.message_erreur {
+	color: #e47cb3;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
 .boutons { 
 	display: flex;
 	justify-content: space-around; 
