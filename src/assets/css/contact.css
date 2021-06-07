@@ -75,9 +75,6 @@ input:focus, select:focus {
 	height: 50px;
 }
 
-.site{ 
-	width: 70%; 
-}
 
 input[type=range] {
 	background: transparent; 
@@ -101,10 +98,6 @@ input[type=range]::-webkit-slider-runnable-track {
 	border-radius: 10px;
 	cursor: pointer;
 	height: 10px;
-}
-
-#date_show { 
-	width: 45%; 
 }
 
 .checkbox-boxes div {
@@ -173,7 +166,7 @@ button:hover {
 		width: 50%;
 	}
 
-	.prenom, .nom_de_famille, .naissance, .age { 
+	#prenom, #nom_de_famille, #naissance, #age { 
 		width: 80%; 
 	}
 
@@ -224,6 +217,10 @@ button:hover {
 		padding-bottom: 20px;
 	}
 
+	#site{ 
+		width: 70%; 
+	}
+
 	.show {
 		display: flex;
 		padding: 0 50px;
@@ -236,6 +233,10 @@ button:hover {
 
 	.show p {
 		margin: 0;
+	}
+
+	#date_show { 
+		width: 45%; 
 	}
 
 	.checkbox-boxes {
