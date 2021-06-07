@@ -24,6 +24,7 @@ caption {
 img {
     width: 100%;
     height: auto;
+    z-index: 1;
 }
 
 h2 {
@@ -57,18 +58,28 @@ section div ul {
     justify-content: space-between;
     padding: 30px ;
     color: black;
-    bbackground-color:#f5c555cc;
+    background-color:#f5c555cc;
 }
-
 .album{
     width: 200px;
 }
 
-.membres {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.spotify > p:nth-child(2) {
+    font-weight: bold;
 }
 
+.membres {
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-basis: 20%;
+}
+.figure {
+    /* width: 20%; */
+    flex: 1 0 21%;
+}
 .overlay {
     position: static;
     height: 100%;
@@ -76,19 +87,16 @@ section div ul {
     opacity: 0;
     transition: .5s ease;
     background-color: black;
+    z-index: 2;
   }
 
   .container:hover .overlay {
     opacity: .90;
   }
-
+  
   .container {
  position: static;
  width: 100%;
  height: auto;
+ z-index: 2;
   }
-
-.spotify > p:nth-child(2) {
-    font-weight: bold;
-}
-
