@@ -1,45 +1,74 @@
-caption {
-    display: none;
-}
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
+    padding: 0;
 }
+
 body > div {
     display: flex;
     align-items: stretch;
     height: 100vh;
 }
+
 body > div > div {
     flex-grow: 1;
 }
+
+caption {
+    display: none;
+}
+
 img {
     width: 100%;
     height: auto;
 }
+
 h2 {
     font-size: 4rem;
 }
+
+/* CARTE SPOTIFY */
+
 .spotify > p:nth-child(2) {
-    font-weight: bold;
+  font-weight: bold;
 }
+
+li {
+    list-style-type: none;
+}
+
+section div ul {
+    font-size: 4rem;
+}
+
+.album {
+    max-width: 50%;
+}
+
+.spotify ul li a .fab {
+    color: black
+}
+
 .flex-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px ;
-    border: 1px solid #CC9932;
+    padding: 30px ;
     color: black;
-    background-color:#CC9932;
+    bbackground-color:#f5c555cc;
 }
+
 .album{
-    max-width: 30%;
+    width: 200px;
 }
+
 .membres {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 .overlay {
     position: static;
     height: 100%;
@@ -48,11 +77,18 @@ h2 {
     transition: .5s ease;
     background-color: black;
   }
+
   .container:hover .overlay {
     opacity: .90;
   }
+
   .container {
  position: static;
  width: 100%;
  height: auto;
   }
+
+.spotify > p:nth-child(2) {
+    font-weight: bold;
+}
+
