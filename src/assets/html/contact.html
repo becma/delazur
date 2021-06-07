@@ -26,7 +26,7 @@
     </nav>
 </header> 
 <main>
-    <form action="#" id="formulaire" name="formulaire" method="GET" target="_blank">
+    <form action="#" id="formulaire" method="GET" target="_blank">
         <fieldset class="informations_generales">
             <legend>Informations générales</legend>
             <div>
@@ -38,9 +38,8 @@
                 <input type="text" id="nom_de_famille" name="nom_de_famille" minlength="2">
             </div>
             <div>
-<!-- Pattern de courriel à ne pas oublier -->
                 <label for="courriel">Adresse courriel</label>
-                <input type="email" id="courriel" name="courriel" pattern="">
+                <input type="email" id="courriel" name="courriel" pattern="([A-Za-z0-9._%\+\-]+@[a-z0-9.\-]+\.[a-z]{2,3})$">
             </div>
             <div>
                 <label for="naissance">Date de naissance</label>
@@ -55,7 +54,6 @@
                 <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
             </div>
         </fieldset>
-<!-- Adresse -->
         <fieldset class="adresse">
             <legend>Adresse</legend>
             <div>
@@ -93,8 +91,6 @@
                 <input type="text" id="code_postal" name="code_postal" pattern="[A-Za-z]{1}[0-9]{1}[A-Za-z]{1} [0-9]{1}[A-Za-z]{1}[0-9]{1}">
             </div>
         </fieldset>
-
-<!-- Couleur - Images - Mois - Semaine -->
         <fieldset class="preferences">
             <div>
                 <label for="couleur">Votre couleur préférée?</label>
@@ -113,7 +109,6 @@
                 <input type="week" id="semaine" name="semaine">
             </div>
         </fieldset>
-<!-- Site - - URL - Datetime - Checkbox  -->
          <fieldset class="site_spectacle">
             <div>
                 <label class="site" for="site">Un site que nous devons découvrir?</label>
@@ -147,7 +142,6 @@
                 </div>
             </div>
         </fieldset>
-<!-- Radio (membres préférés) -->
         <fieldset class="membres_preferes">
             <legend>Votre membre du groupe préféré?</legend>
             <div>
@@ -167,14 +161,13 @@
                 <label for="dr">Dr Homme</label>
             </div>   
         </fieldset>
-<!-- Mot de passsssssssssssssse -->
         <fieldset class="mot_de_passe">
             <label for="mot_de_passe">Mot de paaaaaaaaaasse?</label>
             <input type="password" id="mot_de_passe">
         </fieldset>
         <div class="boutons">
             <button type="reset">Réinitialiser</button>
-            <button type="submit">Soumettre</button>
+            <button type="submit" id="soumettre">Soumettre</button>
         </div>
     </form>
 </main>  
