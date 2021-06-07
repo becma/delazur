@@ -11,6 +11,7 @@ const modal = document.querySelector('.modal');
         rectangleAbonner.addEventListener('click', (event) => {
             formulaireCourriel.style.display = 'flex';
             modal.style.display = 'flex';
+            rectangleAbonner.style.backgroundColor = "#d679a6";
         });
 
         boutonSoumettre.addEventListener('click', (event) => {
@@ -29,10 +30,12 @@ const modal = document.querySelector('.modal');
                 formulaireCourriel.style.display = 'none';
                 messageMerci.style.display = 'none';
                 modal.style.display = 'none';
+                rectangleAbonner.style.backgroundColor = "#f5c555"
             });
         };
 
         boutonFermer.addEventListener('click', (event) => {
             messageMerci.style.display = 'none';
             modal.style.display = 'none';
+            rectangleAbonner.style.backgroundColor = "#f5c555";
         });
