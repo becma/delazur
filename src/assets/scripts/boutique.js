@@ -11,6 +11,13 @@ function basculerOverturePanier() {
 	tableauDuPanierDAchat.classList.toggle('panier-ouvert');
 	baliseIconeDuPanierAchat.classList.toggle('fa-times');
 	baliseIconeDuPanierAchat.classList.toggle('fa-shopping-cart');
+	if	(baliseBasculePanier.getAttribute('aria-label') == 'Ouvrir le panier') {
+		baliseBasculePanier.setAttribute('aria-label', 'Fermer le panier');
+	} else {
+		baliseBasculePanier.setAttribute('aria-label', 'Ouvrir le panier');
+	}
+
+	
 }
 baliseBasculePanier.addEventListener('click', basculerOverturePanier);
 
@@ -32,18 +39,32 @@ function gererPanier() {
 		for (let i = 0; i < panier.length; i++) {
 			const premiereRangee = document.createElement('tr');
 			const deuxiemeRangee = document.createElement('tr');
+			const troisiemeRangee = document.createElement('tr');
 
 			const arr = panier.getItem(panier.key(i)).split(',');
-			premiereRangee.innerHTML = `<th headers="panierAchat-th" colspan="4" id="premier-item">${arr[0]}</th>`;
-			deuxiemeRangee.innerHTML = `<td headers="panierAchat-th premier-item" colspan="1">${
+
+			let idItem = 1;
+			for (let i2 = 0; i2 < panier.length; i2++) {
+				const prochainIdItem = document.getElementById(`item-${idItem}`);
+				if  (prochainIdItem) {
+					idItem++;
+				}
+			}
+
+			premiereRangee.innerHTML = `<th headers="panierAchat-th" colspan="4" id="item-${idItem}">${arr[0]}</th>`;
+			deuxiemeRangee.innerHTML = `<td headers="panierAchat-th item-${idItem}" colspan="1">${
 				arr[1]
-			}</td><td headers="panierAchat-th premier-item" colspan="1">${
+			}</td><td headers="panierAchat-th item-${idItem}" colspan="1">${
 				arr[2]
-			}</td><td headers="panierAchat-th premier-item" colspan="2"><span class="retirerPanier" id="${panier.key(
+			}</td><td headers="panierAchat-th item-${idItem}" colspan="2"><span class="retirerPanier" id="${panier.key(
 				i
 			)}">Retirer du panier</span></td>`;
 			panierBody.append(premiereRangee);
 			premiereRangee.after(deuxiemeRangee);
+			if (panier.length > 1 && i < panier.length - 1) {
+				troisiemeRangee.innerHTML = `<td headers="panierAchat-th item-${idItem}" colspan="4" aria-hidden="true"><hr></td>`;
+				deuxiemeRangee.after(troisiemeRangee);
+			}
 		}
 	}
 	document.querySelectorAll('.retirerPanier').forEach((btn) => btn.addEventListener('click', retirerArticle));

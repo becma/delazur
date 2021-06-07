@@ -115,8 +115,9 @@ button {
 }
 
 button:hover, button:focus {
-    color: #ffc503;
     cursor: pointer;
+	background-color: #fff;
+	border: 2px solid #fff;
 }
 
 sub#nombreDeProduitsDansLePanier {
@@ -165,18 +166,32 @@ div.panier-ouvert {
 #panierAchat-tb.panier-ouvert {
 	width: 100%;
 	margin: 0;
-	padding: 10px;
+	padding: 0 15px 25px 15px;
 	text-align: left;
+}
+
+#panierAchat-tb thead th {
+	padding-bottom: 15px;
+}
+
+#panierAchat-tb hr {
+	margin-bottom: 10px;
+	border:solid black 0.1px;
+
 }
 
 #panierAchat-tb td,
 #panierAchat-tb th {
 	font-size: 1.1rem;
 	margin: 0;
-	padding: 0;
+	padding: 4px 0;
 	font-size: 1.1rem;
 	color: black;
 	text-align: left;
+}
+
+#panierAchat-tb > tbody > tr > td:last-child {
+	text-align: right;
 }
 
 #panierAchat-tb th {
