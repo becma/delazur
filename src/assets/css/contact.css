@@ -133,7 +133,7 @@ input[type=range]::-webkit-slider-runnable-track {
 .message_erreur {
 	color: #e47cb3;
 	font-weight: bold;
-	white-space: nowrap;
+	margin-top: 15px;
 }
 
 .boutons { 
