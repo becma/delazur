@@ -1,67 +1,3 @@
-<<<<<<< HEAD
-body {
-    color: white;
-}
-
-.abonner {
-    background-color: #f5c555;
-    font-size: 30px;
-    text-align: center;
-    padding: 1px 0;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    left: 0; 
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal_courriel {
-    display: none;
-    position: relative;
-    flex-flow: column;
-    background-color: #f5c555;
-    padding: 0px 15px 15px 30px;
-}
-
-#courriel {
-    border: none;
-    border-bottom: solid 1px black;
-    background-color: #f5c555;
-    color: black;
-}
-
-.modal_courriel_merci {
-    align-self: center;
-    position: relative;
-    width: 25%;
-    display: none;
-    flex-flow: column;
-    background-color: #f5c555;
-    padding: 0px 15px 15px 30px;
-}
-
-.modal_courriel_merci > div, .modal_courriel > div {
-    align-self: center;
-}
-
-.fermerLaFenetre {
-    align-self: flex-end;
-    color: black;
-}
-
-button {
-    border: none;
-    margin: 20px;
-    padding: 15px;
-=======
 * {
     transition: all 0.5s ease-in-out;
 }
@@ -88,29 +24,6 @@ body {
 
 main {
     grid-column: 1 / 6;
-}
-
-@media screen and (min-width: 800px) {
-    body {
-        grid-template-columns: repeat(16, 1fr);
-        grid-row-gap: 50px;
-    }
-
-    main {
-        grid-column: 2 / 16;
-    }
-}
-
-@media screen and (min-width: 1224px) {
-
-    html {
-        font-size: 62.5%;
-    }
-
-    body {
-        background-attachment: fixed;
-        background-size: auto 100vh;
-    }
 }
 
 header {
@@ -168,26 +81,6 @@ header li a.active {
     pointer-events: none;
 }
 
-@media screen and (min-width: 800px) {
-    header {
-        grid-column: 2 / 16;
-    }
-
-    header > nav > ul {
-        display: flex;
-    }
-}
-
-@media screen and (min-width: 1224px) {
-    header > div {
-        height: 100vh;
-    }
-
-    header > nav {
-        background-color: transparent;
-    }
-}
-
 body > main > div {
     background: #826644;
     margin: 20px;
@@ -197,9 +90,7 @@ body > main > div {
     flex-wrap: wrap;
     display: flex;
     flex-flow: column;
-    justify-content: center;
-
-    
+    justify-content: center;    
 }
 
 body > main > div > a {
@@ -213,11 +104,16 @@ body > main > div > a {
     flex-wrap: wrap;
     align-self: flex-end;
     text-transform: uppercase;
-
 }
 
 body > main > div > a:hover {
     background-color: white;
+}
+
+button {
+    border: none;
+    margin: 20px;
+    padding: 15px;
 }
 
 .abonner {
@@ -286,11 +182,95 @@ footer div:last-child {
     text-align: right;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_courriel {
+    display: none;
+    position: relative;
+    flex-flow: column;
+    background-color: #f5c555;
+    padding: 0px 15px 15px 30px;
+}
+
+#courriel {
+    border: none;
+    border-bottom: solid 1px black;
+    background-color: #f5c555;
+    color: black;
+}
+
+.modal_courriel_merci {
+    align-self: center;
+    position: relative;
+    width: 25%;
+    display: none;
+    flex-flow: column;
+    background-color: #f5c555;
+    padding: 0px 15px 15px 30px;
+}
+
+.modal_courriel_merci > div, .modal_courriel > div {
+    align-self: center;
+}
+
+.fermerLaFenetre {
+    align-self: flex-end;
+    color: black;
+}
+
+@media screen and (min-width: 800px) {
+    main {
+        grid-column: 2 / 16;
+    }
+
+    body {
+        grid-template-columns: repeat(16, 1fr);
+        grid-row-gap: 50px;
+    }
+
+    header {
+        grid-column: 2 / 16;
+    }
+
+    header > nav > ul {
+        display: flex;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
->>>>>>> spectacles
+}
+
+@media screen and (min-width: 1224px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        background-attachment: fixed;
+        background-size: auto 100vh;
+    }
+
+    header > div {
+        height: 100vh;
+    }
+
+    header > nav {
+        background-color: transparent;
+    }
 }
