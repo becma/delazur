@@ -30,6 +30,12 @@ h2 {
     font-size: 4rem;
 }
 
+/* CARTE SPOTIFY */
+
+.spotify > p:nth-child(2) {
+  font-weight: bold;
+}
+
 li {
     list-style-type: none;
 }
@@ -51,7 +57,11 @@ section div ul {
     justify-content: space-between;
     padding: 30px ;
     color: black;
-    background-color:#f5c555cc;
+    bbackground-color:#f5c555cc;
+}
+
+.album{
+    width: 200px;
 }
 
 .spotify > p:nth-child(2) {
