@@ -25,6 +25,7 @@ body {
 }
 
 main {
+    /* display: grid; */
     grid-column: 1 / 6;
 }
 
@@ -106,27 +107,38 @@ body > main > h2 {
 /* ---- DIV ---- */
 
 body > main > div {
-    background: #826644;
-    margin: 50px;
-    padding: 20px;
+    background-color: rgba(73, 58, 27);
+    margin: 10px;
+    padding: 30px;
     border-style: solid;
     border-width: 1px;
-    border-color: pink;
+    border-color: #d679a6;
     display: flex;
-    flex-flow: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: center;
-    height: 160px;
+    height: 150px;
+}
+
+body > main > div > p {
+    margin: 5px 0;
+}
+
+.lieu {
+    margin-top: 15px;
 }
 
 body > main > div > button {
-    background: pink;
-    border-style: solid;
-    border-color: #f5c555;
+    background: #d679a6;
+    border: 1px solid #f5c555;
     float: right;
-    padding: 15px;
+    padding: 20px 15px;
     align-self: flex-end;
     text-transform: uppercase;
+}
+
+main > div > button > a {
+    text-decoration: none;
+    color: black;
 }
 
 body > main > div > button:hover {
@@ -147,6 +159,7 @@ body > main > div > a:link {
 h3 {
     font-size: 3rem;
     margin: 0;
+    max-width: 80%;
 }
 
 time {
@@ -208,12 +221,17 @@ footer div:last-child {
 /* ----  Modal ---- */
 
 .abonner {
+    cursor: pointer;
     font-size: 2rem;
     letter-spacing: 10px;
     background-color: #f5c555;
     text-align: center;
     border-style: none;
     text-transform: uppercase;
+}
+
+.abonner:hover {
+    background-color: #d679a6;
 }
 
 .modal {
@@ -236,8 +254,16 @@ footer div:last-child {
     display: none;
     position: relative;
     flex-flow: column;
+    align-items: flex-start;
     background-color: #f5c555;
     padding: 0px 15px 15px 30px;
+}
+
+.texteNewsletter {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0 25px 0 0;
 }
 
 #courriel {
@@ -248,13 +274,19 @@ footer div:last-child {
 }
 
 .modal_courriel_merci {
-    align-self: center;
     position: relative;
-    width: 25%;
     display: none;
     flex-flow: column;
+    align-items: flex-start;
     background-color: #f5c555;
     padding: 0px 15px 15px 30px;
+}
+
+.texteNewsletterMerci {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0 25px 0 0;
 }
 
 .modal_courriel_merci > div, .modal_courriel > div {
@@ -262,112 +294,69 @@ footer div:last-child {
 }
 
 .fermerLaFenetre {
+    cursor: pointer;
     align-self: flex-end;
     color: black;
+    font-size: 2rem;
+}
+
+.fermerLaFenetre:hover, .fermerLaFenetre:focus {
+    color: #d679a6;
+    text-decoration: underline;
 }
 
 .bouton_soumettre, .bouton_fermer {
+    cursor: pointer;
     border: none;
-    margin: 20px;
+    margin: 12px 12px 30px 12px;
     padding: 15px;
+    text-transform: uppercase;
 }
+
+.bouton_soumettre:hover, .bouton_fermer:hover {
+    background-color: #d679a6;
+}
+
+input {
+    padding: 12px;
+    align-self: stretch;
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    color: black;
+}
+
+#courriel:focus {
+    outline: none;
+    background: #d679a6;
+}
+
+
 
 
 /* ---- Media Queries ---- */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 62.5%
+    }
+
     main {
         grid-column: 2 / 16;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
     }
 
     body {
         grid-template-columns: repeat(16, 1fr);
         grid-row-gap: 50px;
+        background-attachment: fixed;
+        background-size: auto 100vh;
     }
 
     header {
         grid-column: 2 / 16;
-    }
-
-    header > nav > ul {
-        display: flex;
-    }
-
-    main > div:first-child {
-        grid-column: 4 / 7 ;
-        text-align: center;
-    }
-    
-    main > div:nth-child(2) {
-        grid-column: 4 / 7;   
-    }
-    
-    main > div:nth-child(3) { 
-        grid-column: 3 / 6;
-    }
-    
-    main > div:nth-child(4) {
-        grid-column: 5 / 8;
-    }
-    
-    main > div:nth-child(5) {
-        grid-column: 2 / 5;
-    }
-    
-    main > div:nth-child(6) {
-        grid-column: 3 / 6;
-    }
-    
-    main > div:nth-child(7) {
-        grid-column: 4 / 7;
-    }
-    
-    main > div:nth-child(8) {
-        grid-column: 5 / 8;
-    }
-    
-    main > div:nth-child(9) {
-        grid-column: 3 / 6;
-    }
-    
-    main > div:nth-child(10) {
-        grid-column: span 3;
-    }
-    
-    main>div:nth-child(11) {
-        grid-column: 4 / 7;
-    }
-    
-    main > div:nth-child(12) {
-        grid-column: 5 / 8;
-    }
-    
-    main > div:nth-child(13) {
-        grid-column: 4 / 7;
-    }
-    
-    main>div:last-child {
-        grid-column: 1 / 10;
-        text-align: center;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (min-width: 1224px) {
-    html {
-        font-size: 62.5%;
-    }
-
-    body {
-        background-attachment: fixed;
-        background-size: auto 100vh;
     }
 
     header > div {
@@ -376,5 +365,75 @@ footer div:last-child {
 
     header > nav {
         background-color: transparent;
+    }
+
+    header > nav > ul {
+        display: flex;
+    }
+
+    body > main > div {
+        background-color: rgba(73, 58, 27, 0.75);
+    }
+
+    main h2 {
+        grid-column: 3 / 6
+    }
+
+    main > div:nth-child(2) {
+        grid-column: 3 / 6;
+    }
+    
+    main > div:nth-child(3) {
+        grid-column: 2 / 5;   
+    }
+    
+    main > div:nth-child(4) { 
+        grid-column: 4 / 7;
+    }
+    
+    main > div:nth-child(5) {
+        grid-column: 1 / 4;
+    }
+    
+    main > div:nth-child(6) {
+        grid-column: 2 / 5;
+    }
+    
+    main > div:nth-child(7) {
+        grid-column: 3 / 6;
+    }
+    
+    main > div:nth-child(8) {
+        grid-column: 4 / 7;
+    }
+    
+    main > div:nth-child(9) {
+        grid-column: 2 / 5;
+    }
+    
+    main > div:nth-child(10) {
+        grid-column: 5 / 8;
+    }
+    
+    main > div:nth-child(11) {
+        grid-column: 3 / 6;
+    }
+    
+    main > div:nth-child(12) {
+        grid-column: 4 / 7;
+    }
+    
+    main > div:nth-child(13) {
+        grid-column: 3 / 6;
+    }
+    
+    main > div:nth-child(14) {
+        grid-column: 1 / 8;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
