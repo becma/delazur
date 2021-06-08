@@ -25,7 +25,6 @@ body {
 }
 
 main {
-    /* display: grid; */
     grid-column: 1 / 6;
 }
 
@@ -92,10 +91,16 @@ header li a.active {
     pointer-events: none;
 }
 
+header > nav > ul > li:nth-child(2) > a {
+    outline: none;
+    color: #d679a6;
+    border-bottom: none;
+}
+
 
 /* ---- Main ---- */
 
-body > main > h2 {
+main > h2 {
     letter-spacing: 10px;
     text-align: center;
     color: #d679a6;
@@ -106,17 +111,16 @@ body > main > h2 {
 
 /* ---- DIV ---- */
 
-body > main > div {
+.tableau-date {
     background-color: rgba(73, 58, 27);
-    margin: 10px;
+    margin: 42px;
     padding: 30px;
     border-style: solid;
     border-width: 1px;
     border-color: #d679a6;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    height: 150px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 body > main > div > p {
@@ -124,7 +128,7 @@ body > main > div > p {
 }
 
 .lieu {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 body > main > div > button {
@@ -132,8 +136,8 @@ body > main > div > button {
     border: 1px solid #f5c555;
     float: right;
     padding: 20px 15px;
-    align-self: flex-end;
     text-transform: uppercase;
+    min-width: 140px;
 }
 
 main > div > button > a {
@@ -159,10 +163,10 @@ body > main > div > a:link {
 h3 {
     font-size: 3rem;
     margin: 0;
-    max-width: 80%;
 }
 
-time {
+.temps {
+    margin: 0;
     font-weight: bold;
     font-size: 2rem;
 }
@@ -221,8 +225,10 @@ footer div:last-child {
 /* ----  Modal ---- */
 
 .abonner {
+    margin: 42px;
+    padding: 30px;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 10px;
     background-color: #f5c555;
     text-align: center;
@@ -298,11 +304,16 @@ footer div:last-child {
     align-self: flex-end;
     color: black;
     font-size: 2rem;
+    border: none;
+    background: none;
+    margin: 1em 0;
 }
 
 .fermerLaFenetre:hover, .fermerLaFenetre:focus {
     color: #d679a6;
     text-decoration: underline;
+    border: none;
+    background: none;
 }
 
 .bouton_soumettre, .bouton_fermer {
@@ -371,12 +382,17 @@ input::placeholder {
         display: flex;
     }
 
-    body > main > div {
+    .tableau-date {
         background-color: rgba(73, 58, 27, 0.75);
+        margin: 15px;
     }
 
     main h2 {
         grid-column: 3 / 6
+    }
+
+    .lieu {
+        margin-top: 20px;
     }
 
     main > div:nth-child(2) {
@@ -429,6 +445,15 @@ input::placeholder {
     
     main > div:nth-child(14) {
         grid-column: 1 / 8;
+    }
+
+    .abonner {
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .abonner:hover {
+        background-color: #d679a6;
     }
 
     footer {

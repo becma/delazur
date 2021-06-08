@@ -30,12 +30,12 @@ const modal = document.querySelector('.modal');
                 formulaireCourriel.style.display = 'none';
                 messageMerci.style.display = 'none';
                 modal.style.display = 'none';
-                rectangleAbonner.style.backgroundColor = "#f5c555"
+                rectangleAbonner.style.backgroundColor = ""
             });
         };
 
         boutonFermer.addEventListener('click', (event) => {
             messageMerci.style.display = 'none';
             modal.style.display = 'none';
-            rectangleAbonner.style.backgroundColor = "#f5c555";
+            rectangleAbonner.style.backgroundColor = "";
         });
