@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -21,64 +17,73 @@ caption {
     display: none;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
-
 h2 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 /* CARTE SPOTIFY */
 
-li {
-    list-style-type: none;
+.album {
+    position: relative;
 }
 
-section div ul {
-    font-size: 4rem;
+.album img {
+    position: absolute;
+    width: 100%;
+    max-height: 30rem;
+    max-width: 30rem;
 }
 
-.spotify a:hover {
+.copie-album {
+    display: none;
+}
+
+#album-dessus {
+    z-index: 10;
+}
+
+.azur-mimosa {
+    background-color:#f5c555e1;
+    color: black;
+    display: grid;
+    height: 300px;
+    padding: 30px;
+}
+
+.spotify {
+    z-index: 11;
+}
+
+.spotify a {
+    color: black;
+}
+
+.spotify i {
+    font-size: 2em;
+}
+
+.spotify a:hover, .spotify a:focus {
     color:#1ED760;
 }
 
-.spotify p:nth-child(2) {
-    font-weight: 100;
-}
-
-.album {
-    max-width: 20%;
-}
-
-.spotify ul li a {
-    color: black
-}
-
-.flex-container {
-    padding: 30px ;
-    color: black;
-    background-color:#f5c555e1;
+.spotify > p:nth-child(2) {
+    font-weight: bold;
 }
 
 /* QUI EST DELAZUR */
 
-article h3 {
+article > h3 {
     color:#d679a6;
     font: 3rem 'Damion', serif;
 }
 
 /* MEMBRES DU GROUPE */
 
-table {
-    border-collapse: collapse;
-  }
-  
-
 td h3 {
     color: #f5c555;
-    font-weight: 600;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 5px;
     text-transform: uppercase;
 }
 
@@ -87,48 +92,82 @@ th {
     text-align: left;
 }
 
-.container:hover .overlay tr {
+.tableau-infos-musicien:hover .tableau-infos-par-dessus tr {
     border-bottom: 1px solid white;
 }
 
-.container {
-    position: static;
-    width: 100%;
-    height: auto;
+.conteneur-tableau-membre {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 16px;
 }
 
-.container:hover {
+.conteneur-tableau-membre:hover {
     background-color: rgba(0, 0, 0, 0.70);
 }
 
-.membres {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.tableau-infos-musicien {
+    border-collapse: collapse;
+    max-width: 275px;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
 }
 
-.overlay {
-    cursor: pointer;
-    position: static;
-    height: 500px;
-    width: 200px;
-    opacity: 0;
-  }
+.liste-membres-groupe {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
-.overlay:hover {
+.liste-membres-groupe img {
+    width: 100%;
+    z-index: 0;
+}
+
+.membre-groupe {
+    position: relative;
+    max-width: 275px;
+    margin: 30px 10px;
+}
+
+.tableau-infos-par-dessus {
+    opacity: 0;
+}
+
+.tableau-infos-musicien:hover .tableau-infos-par-dessus {
     opacity: 100;
 }
 
 
 
-.spotify > p:nth-child(2) {
-    font-weight: bold;
-}
 
 
 @media screen and (min-width: 800px) {
-    .flex-container {
-        display: flex;
-        justify-content: space-between;
+    .album {
+        grid-column: 1 / 4;
+    }
+
+    .azur-mimosa {
+        grid-template: repeat(2, 1fr) / repeat(12, 1fr);
+    }
+
+    .copie-album {
+        display: block;
+    }
+
+    .spotify {
+        grid-column: 10 / 13;
+    }
+    
+    .spotify h2 {
+        grid-area: 1 / 10 / 2 / 13;
+    }
+
+    .icone-zone-spotify {
+        grid-area: 2 / 12 / 3 / 13;
     }
 }
 
