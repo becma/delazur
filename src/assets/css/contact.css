@@ -24,13 +24,13 @@ main div {
 label, 
 main p { 
 	display: block;
-	font-size: 1.7rem;
 }
 
 input {
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid #000;
+	cursor: pointer;
 	font-family: 'Montserrat', sans-serif;
 	padding: 15px 10px;
 	width: 85%;
@@ -91,7 +91,6 @@ input[type=range]::-webkit-slider-thumb {
 	background: #f5c555;
 	border: 1px solid #e47cb3; 
 	border-radius: 50%;
-	cursor: pointer;
 	height: 30px;
 	transform: translateY(-35%);
 	-webkit-appearance: none;
@@ -101,7 +100,6 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-webkit-slider-runnable-track {
 	background: #e47cb3;
 	border-radius: 10px;
-	cursor: pointer;
 	height: 10px;
 }
 
@@ -150,15 +148,21 @@ input[type=range]::-webkit-slider-runnable-track {
 button { 
 	background: transparent;
 	border: 1px solid #000;
+	cursor: pointer;
 	height: 45px;
 	width: 120px;
 }
 
-button:focus,
+button:focus {
+	background: #d679ab8c;
+	border: none; 
+	outline: 2px solid #d679ab8c;
+	transition: none;
+}
+
 button:hover { 
 	background: #d679ab8c;
-	border:none; 
-	outline: 3px solid #d679ab8c;
+	border: 3px solid #d679ab8c; 
 }
 
 @media screen and (min-width: 1200px) {
@@ -177,7 +181,10 @@ button:hover {
 		width: 50%;
 	}
 
-	#prenom, #nom_de_famille, #naissance, #age { 
+	#prenom, 
+	#nom_de_famille, 
+	#naissance, 
+	#age { 
 		width: 80%; 
 	}
 
@@ -195,7 +202,6 @@ button:hover {
 		margin-right: 30px;
 	}
 	
-	
 	.preferences {
 		display: flex;
 		justify-content: space-around;
@@ -207,7 +213,8 @@ button:hover {
 		width: 25%;
 	}
 	
-	.preferences label, .preferences input { 
+	.preferences label, 
+	.preferences input { 
 		width: 70%;
 	}
 	
@@ -225,7 +232,7 @@ button:hover {
 		padding-bottom: 20px;
 	}
 	
-	#site{ 
+	#site { 
 		width: 70%; 
 	}
 	
@@ -262,7 +269,6 @@ button:hover {
 		display: flex;
 		justify-content: flex-start;
 		padding: 50px;
-		
 	}
 
 	.membres_preferes div {
