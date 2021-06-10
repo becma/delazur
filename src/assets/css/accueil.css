@@ -3,16 +3,6 @@ body {
     padding: 0;
 }
 
-body > div {
-    display: flex;
-    align-items: stretch;
-    height: 100vh;
-}
-
-body > div > div {
-    flex-grow: 1;
-}
-
 caption {
     display: none;
 }
