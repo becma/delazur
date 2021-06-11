@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+caption {
+    display: none;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+/* CARTE SPOTIFY */
+
+.album {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+}
+
+.album img {
+    margin-right: 8%;
+    max-height: 35rem;
+    max-width: 35rem;
+    position: absolute;
+    width: 100%;
+}
+
+.copie-album {
+    display: none;
+}
+
+#album-dessus {
+    z-index: 10;
+}
+
+.azur-mimosa {
+    background-color:#f5c555e1;
+    color: black;
+    display: grid;
+    height: 300px;
+    padding: 30px;
+    position: relative;
+}
+
+.spotify {
+    align-self: center;
+    margin-left: 20px;
+    z-index: 11;
+}
+
+.spotify a, .spotify a:visited {
+    color: black;
+}
+
+.spotify h2 {
+    font-size: 6.10rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.spotify p {
+    display: inline;
+    font-weight: 500;
+    margin: 0;
+}
+
+.spotify i {
+    font-size: 3.5em;
+    margin: 0 0 0 45px;
+}
+
+.spotify a:hover, .spotify a:focus {
+    color:#1ED760;
+}
+
+.spotify > p:nth-child(2) {
+    display: block;
+    font-size: 1.25em;
+    font-weight: 800;
+    max-width: 250px;
+}
+
+/* QUI EST DELAZUR */
+.qui-est-Delazur {
+    margin: 80px 30px 30px;
+}
+
+.qui-est-Delazur h3 {
+    color:#d679a6;
+    font: 3rem 'Damion', serif;
+    margin-top: 80px;
+}
+
+.qui-est-Delazur p {
+    font-size: 1.25em;
+}
+
+
+/* MEMBRES DU GROUPE */
+
+td h3 {
+    color: #f5c555;
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+th {
+    font-weight: 400;
+    text-align: left;
+}
+
+.conteneur-tableau-membre {
+    bottom: 0;
+    position: absolute;
+    padding: 16px;
+    top: 0;
+    z-index: 1;
+}
+
+.conteneur-tableau-membre:hover {
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.tableau-infos-musicien {
+    border-collapse: collapse;
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+    table-layout: auto;
+}
+
+.tableau-infos-musicien th {
+    padding-right: 30px;
+    width: 50%;    
+}
+
+.tableau-infos-musicien:hover .tableau-infos-par-dessus tr {
+    border-bottom: 1px solid white;
+}
+
+.liste-membres-groupe {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.liste-membres-groupe img {
+    width: 100%;
+    z-index: 0;
+}
+
+.membre-groupe {
+    position: relative;
+    max-width: 350px;
+    margin: 30px 10px;
+}
+
+.tableau-infos-par-dessus {
+    opacity: 0;
+    font-size: 1em;
+}
+
+.tableau-infos-musicien:hover 
+.tableau-infos-par-dessus {
+    opacity: 100;
+}
+
+
+
+@media screen and (min-width: 800px) {
+    .album {
+        display: grid;
+        grid-column: 1 / 4;
+    }
+
+    .album img {
+        display: inline-block;
+        max-height: 27rem;
+        max-width: 27rem;
+    }
+
+    .azur-mimosa {
+        grid-template: repeat(2, 1fr) / repeat(12, 1fr);
+    }
+    
+    .copie-album {
+        display: block;
+    }
+
+    .spotify {
+        grid-column: 9 / 13;
+        margin-left: 25px;
+    }
+
+    .spotify h2 {
+        font-size: 4.75rem;
+        font-weight: 800;
+    }
+
+    .spotify i {
+        font-size: 2.75em;
+        margin: 0 0 0 35px;
+    }
+
+    .spotify > p:nth-child(2) {
+        font-size: 1em;
+    }
+
+    .spotify > p:nth-child(3) {
+        font-size: 0.8em;
+    }
+}
