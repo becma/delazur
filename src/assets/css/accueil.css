@@ -14,14 +14,24 @@ h2 {
 /* CARTE SPOTIFY */
 
 .album {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    position: absolute;
+    width: 100%;
 }
 
 .album img {
+    font-weight: 800;
+    /* left: 50px; */
+    /* margin-left: 15%; */
+    margin-right: 8%;
+    max-height: 35rem;
+    max-width: 35rem;
     position: absolute;
+    /* right: 50px; */
     width: 100%;
-    max-height: 30rem;
-    max-width: 30rem;
 }
 
 .copie-album {
@@ -38,9 +48,12 @@ h2 {
     display: grid;
     height: 300px;
     padding: 30px;
+    position: relative;
 }
 
 .spotify {
+    align-self: center;
+    margin-left: 65px;
     z-index: 11;
 }
 
@@ -50,6 +63,7 @@ h2 {
 
 .spotify h2 {
     font-size: 5rem;
+    font-weight: 800;
 }
 
 .spotify p {
@@ -152,18 +166,35 @@ th {
     .album {
         grid-column: 1 / 4;
     }
-
+    .album img {
+        max-height: 30rem;
+        max-width: 30rem;
+    }
     .azur-mimosa {
         grid-template: repeat(2, 1fr) / repeat(12, 1fr);
     }
-
+    
     .copie-album {
         display: block;
     }
-
     .spotify {
         grid-column: 9 / 13;
         margin-left: 25px;
     }
 }
-
+/* @media screen and (max-width: 800px) {
+    .album {
+        grid-column: 1 / 20;
+    }
+    .album img {
+        max-height: 40rem;
+        max-width: 40rem;
+    }
+    .azur-mimosa {
+        grid-template: repeat(2, 1fr) / repeat(20, 5fr);
+    }
+    .spotify {
+        grid-column: 1 / 20 ;
+        margin-left: 25px;
+    }
+} */
